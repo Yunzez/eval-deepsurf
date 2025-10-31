@@ -1,0 +1,154 @@
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+[package]
+name = "crate_batch_5-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+semver = "0.9.0"
+serde = "1.0"
+serde_yaml = "0.8.3"
+der-parser = "10.0.0"
+minidump = "0.22.0"
+minidump-processor = "0.22.0"
+minidump-unwind = "0.22.0"
+symbolic-minidump = "=8.5.0"
+unified-diff = "0.2.0"
+
+[workspace]
+members = []
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies.arbitrary]
+version = "1"
+features = ["derive"]
+
+[dependencies.crate_batch_5]
+path = ".."
+
+[dependencies.rasn]
+git = "https://github.com/librasn/rasn"
+rev = "d9a9219"
+
+[dependencies.ron]
+git = "https://github.com/ron-rs/ron"
+rev = "caf55ce"
+
+[dependencies.rust-ini]
+git = "https://github.com/zonyitoo/rust-ini"
+rev = "8d5a92f"
+
+[dependencies.rustc-demangle]
+git = "https://github.com/rust-lang/rustc-demangle"
+rev = "48646c6"
+
+[dependencies.sequoia-openpgp]
+git = "https://gitlab.com/sequoia-pgp/sequoia"
+rev = "adcbb3fd"
+
+[dependencies.simple_asn1]
+git = "https://github.com/acw/simple_asn1"
+rev = "b72f384"
+
+[dependencies.snap]
+git = "https://github.com/BurntSushi/rust-snappy"
+rev = "025b88b"
+
+[dependencies.soroban-env-host]
+git = "https://github.com/stellar/rs-soroban-env"
+rev = "2ceaad2"
+
+[dependencies.soroban-env-common]
+git = "https://github.com/stellar/rs-soroban-env"
+rev = "2ceaad2"
+
+[dependencies.sqlparser]
+git = "https://github.com/apache/datafusion-sqlparser-rs"
+rev = "35ef0ee"
+
+[dependencies.ssh-keys]
+git = "https://github.com/tailhook/ssh-keys"
+rev = "36fe530"
+
+[dependencies.ssh-parser]
+git = "https://github.com/rusticata/ssh-parser"
+rev = "5f197b9"
+
+[dependencies.swf-parser]
+git = "https://github.com/open-flash/swf-parser"
+rev = "3993499"
+
+[dependencies.symbolic]
+package = "symbolic"
+git = "https://github.com/getsentry/symbolic"
+rev = "af3e580"
+features = [ "demangle", "unreal",]
+
+[dependencies.symphonia]
+git = "https://github.com/pdeljanov/Symphonia"
+rev = "c75a08d"
+features = [ "aac",]
+
+[dependencies.syn_188]
+package = "syn"
+git = "https://github.com/dtolnay/syn"
+rev = "132bca5"
+
+[dependencies.tera_190]
+package = "tera"
+git = "https://github.com/Keats/tera"
+rev = "5495105"
+
+[dependencies.sqlformat]
+git = "https://github.com/shssoichiro/sqlformat-rs"
+rev = "62c7110"
+
+[dependencies.raven-uxn]
+git = "https://github.com/mkeeter/raven"
+rev = "4a6c08f"
+
+[[bin]]
+name = "test_decode"
+path = "fuzz_targets/test_decode.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "Arbitrary"
+path = "fuzz_targets/Arbitrary.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "Arbitrary_1"
+path = "fuzz_targets/Arbitrary_1.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "copy_from_slice"
+path = "fuzz_targets/copy_from_slice.rs"
+test = false
+doc = false
+
+
+
+[[bin]]
+name = "from_utf8"
+path = "fuzz_targets/from_utf8.rs"
+test = false
+doc = false
+

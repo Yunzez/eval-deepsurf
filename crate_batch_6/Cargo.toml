@@ -1,0 +1,41 @@
+[package]
+name = "crate_batch_6"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+
+tinytemplate = {git = "https://github.com/bheisler/TinyTemplate", rev = "522605e"}
+
+todotxt = "0.3.0"
+
+tokei = {git = "https://github.com/XAMPPRocky/tokei", rev = "79a9d4c"}
+
+toml ={ git="https://github.com/toml-rs/toml-rs", rev="7aa2594"}
+
+ttf-parser = {git = "https://github.com/harfbuzz/ttf-parser", rev = "ba4fc75"}
+
+ubyte = {git = "https://github.com/SergioBenitez/ubyte", rev = "c3cfe51"}
+
+unicode-segmentation = {git = "https://github.com/unicode-rs/unicode-segmentation", rev = "4a76978"}
+
+url = {git = "https://github.com/servo/rust-url", rev="89876ff"}
+
+uuid ={ git="https://github.com/uuid-rs/uuid", rev = "bc7f509"}
+
+vial = "0.1"
+
+image = "=0.12.2"
+nom = "=2.1.0"
+vobsub = {git = "https://github.com/emk/subtitles-rs", rev = "7b38b95"}
+
+wayland-commons = "=0.21.0"
+
+ws ={ git = "https://github.com/housleyjk/ws-rs", rev = "ec5fda6"}
+
+yaxpeax-x86 = {git = "https://github.com/iximeow/yaxpeax-x86", rev = "cd98728"}
+
+zip = {git = "https://github.com/mvdnes/zip-rs", rev = "5c12e51"}

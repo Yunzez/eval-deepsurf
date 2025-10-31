@@ -1,0 +1,124 @@
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+[package]
+name = "crate_batch_2-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+geo = "0.29.3"
+serde = "*"
+kalker = "2.1.1"
+arbitrary = { version = "1", features = ["derive"] }
+
+[workspace]
+members = []
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies.crate_batch_2]
+path = ".."
+
+[dependencies.flif]
+git = "https://github.com/ZoeyR/flif.rs"
+rev = "a3e7784"
+
+[dependencies.fontdue]
+git = "https://github.com/mooman219/fontdue"
+rev = "4772807"
+
+[dependencies.goblin]
+git = "https://github.com/m4b/goblin"
+rev = "c7cd994"
+
+[dependencies.h2]
+git = "https://github.com/hyperium/h2"
+rev = "308663e"
+
+[dependencies.handlebars]
+package = "handlebars"
+git = "https://github.com/sunng87/handlebars-rust"
+rev = "880486b"
+
+[dependencies.serde-hjson]
+git = "https://github.com/hjson/hjson-rust"
+rev = "6b76180"
+
+[dependencies.human_name]
+git = "https://github.com/djudd/human-name"
+rev = "2bcfc22"
+
+[dependencies.hyper]
+git = "https://github.com/hyperium/hyper"
+rev = "6eb0753"
+
+[dependencies.image]
+git = "https://github.com/image-rs/image"
+rev = "63bbe70"
+
+[dependencies.gif]
+git = "https://github.com/image-rs/image-gif"
+rev = "167bc0f"
+
+[dependencies.jpeg-decoder-63]
+package = "jpeg-decoder"
+git = "https://github.com/image-rs/jpeg-decoder"
+rev = "8a8d331"
+
+[dependencies.jpeg-decoder-64]
+package = "jpeg-decoder"
+git = "https://github.com/image-rs/jpeg-decoder"
+rev = "ee4fc87"
+
+[dependencies.fancy-regex]
+git = "https://github.com/fancy-regex/fancy-regex"
+rev = "f99e5f6"
+
+[dependencies.jsonschema]
+git = "https://github.com/Stranger6667/jsonschema"
+rev = "d7b6919"
+
+[dependencies.juniper]
+git = "https://github.com/graphql-rust/juniper"
+rev = "52aea4d"
+
+[dependencies.just]
+package = "just"
+git = "https://github.com/casey/just"
+rev = "8371ada"
+
+[[bin]]
+name = "benchmark_vec_u8"
+path = "fuzz_targets/benchmark_vec_u8.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "Arbitrary"
+path = "fuzz_targets/Arbitrary.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "from_utf8"
+path = "fuzz_targets/from_utf8.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "from_utf8_1"
+path = "fuzz_targets/from_utf8_1.rs"
+test = false
+doc = false
+

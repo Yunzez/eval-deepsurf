@@ -1,0 +1,48 @@
+[package]
+name = "crate_batch_3"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+path = "src/lib.rs"
+
+[dependencies]
+libflate={git="https://github.com/sile/libflate", rev="7e0e56f"}
+# pnet='0.16.0' # ! libpnet
+lopdf={git = "https://github.com/J-F-Liu/lopdf", rev = "53090ad"}
+lz-fear={git="https://github.com/main--/rust-lz-fear", rev="8cb5d60"}
+lz4_flex={git="https://github.com/PSeitz/lz4_flex", rev = "8daa6ec"}
+
+# rust-minidump-84={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="5758292"}
+rust-minidump-85={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="f0bdcc9"}
+
+# # ? for line 86 - 90
+rust-minidump-86={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="22d7608"}
+# minidump-processor={git="",rev = "5f31ab7"}
+minidump-processor-86={package = "minidump-processor", git="https://github.com/rust-minidump/rust-minidump", rev="22d7608"}
+
+
+rust-minidump-93={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="83f68a6"}
+
+
+
+miniz_oxide={git="https://github.com/Frommi/miniz_oxide", rev = "0adc62b"}
+
+mp4ameta = "0.11.0"
+
+naga={git="https://github.com/gfx-rs/naga", rev = "1f5008f"}
+
+ncurses-rs="0.0.3"
+
+nom={git = "https://github.com/rust-bakery/nom", rev = "10f1f66"}
+
+
+npy={git = "https://github.com/potocpav/npy-rs", rev = "42ea9dd"}
+npy_derive={package = "npy-derive", git = "https://github.com/potocpav/npy-rs", rev = "42ea9dd"}
+
+ntfs={git = "https://github.com/ColinFinck/ntfs", rev = "0783cbd"}
+# ntp={git = "https://github.com/JeffBelgum/ntp", rev = "b175b57"}
+# num={git = "https://github.com/rust-num/num", rev = "d273495"}
+# num-traits={git = "https://github.com/rust-num/num", rev = "d273495"}
+# num-bigint={git = "https://github.com/rust-num/num", rev = "d273495", default-features = false, features = []}
+base64 = "0.22.1"

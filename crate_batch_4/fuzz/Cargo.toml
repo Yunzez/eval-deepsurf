@@ -1,0 +1,105 @@
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+[package]
+name = "crate_batch_4-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+pancurses = "0.17"
+pcapng = "1.0.0"
+glob = "0.3.2"
+pgp = "0.15.0"
+
+[workspace]
+members = []
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies.arbitrary]
+version = "1"
+features = ["derive"]
+
+[dependencies.crate_batch_4]
+path = ".."
+
+[dependencies.phonenumber]
+git = "https://github.com/whisperfish/rust-phonenumber"
+rev = "da5c76c"
+
+[dependencies.pdf-112]
+package = "pdf"
+git = "https://github.com/pdf-rs/pdf"
+rev = "316168c"
+
+[dependencies.pdf-115]
+package = "pdf"
+git = "https://github.com/pdf-rs/pdf"
+rev = "99e70cd"
+
+[dependencies.plist]
+git = "https://github.com/ebarnard/rust-plist"
+rev = "9ed64da"
+
+[dependencies.png]
+git = "https://github.com/image-rs/image-png"
+rev = "007c06a"
+
+[dependencies.prettytable]
+package = "prettytable-rs"
+git = "https://github.com/phsym/prettytable-rs"
+rev = "25cfe72"
+
+[dependencies.pulldown-cmark-128]
+package = "pulldown-cmark"
+git = "https://github.com/pulldown-cmark/pulldown-cmark"
+rev = "a4e41df"
+
+[dependencies.pulldown-cmark-131]
+package = "pulldown-cmark"
+git = "https://github.com/pulldown-cmark/pulldown-cmark"
+rev = "fb1fb37"
+
+[dependencies.pulldown-cmark-133]
+package = "pulldown-cmark"
+git = "https://github.com/pulldown-cmark/pulldown-cmark"
+rev = "fba26ff"
+
+[dependencies.quick-xml]
+git = "https://github.com/tafia/quick-xml"
+rev = "0fd7fbb"
+
+[[bin]]
+name = "decode_png"
+path = "fuzz_targets/decode_png.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "Arbitrary"
+path = "fuzz_targets/Arbitrary.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "Arbitrary_1"
+path = "fuzz_targets/Arbitrary_1.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "copy_from_slice"
+path = "fuzz_targets/copy_from_slice.rs"
+test = false
+doc = false

@@ -1,0 +1,103 @@
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+[package]
+name = "crate_batch_3-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+mp4ameta = "0.11.0"
+ncurses-rs = "0.0.3"
+base64 = "0.22.1"
+arbitrary = { version = "1", features = ["derive"] }
+
+[workspace]
+members = []
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies.crate_batch_3]
+path = ".."
+
+[dependencies.libflate]
+git = "https://github.com/sile/libflate"
+rev = "7e0e56f"
+
+[dependencies.lopdf]
+git = "https://github.com/J-F-Liu/lopdf"
+rev = "53090ad"
+
+[dependencies.lz-fear]
+git = "https://github.com/main--/rust-lz-fear"
+rev = "8cb5d60"
+
+[dependencies.lz4_flex]
+git = "https://github.com/PSeitz/lz4_flex"
+rev = "8daa6ec"
+
+[dependencies.rust-minidump-85]
+package = "minidump"
+git = "https://github.com/rust-minidump/rust-minidump"
+rev = "f0bdcc9"
+
+[dependencies.rust-minidump-86]
+package = "minidump"
+git = "https://github.com/rust-minidump/rust-minidump"
+rev = "22d7608"
+
+[dependencies.minidump-processor-86]
+package = "minidump-processor"
+git = "https://github.com/rust-minidump/rust-minidump"
+rev = "22d7608"
+
+[dependencies.rust-minidump-93]
+package = "minidump"
+git = "https://github.com/rust-minidump/rust-minidump"
+rev = "83f68a6"
+
+[dependencies.miniz_oxide]
+git = "https://github.com/Frommi/miniz_oxide"
+rev = "0adc62b"
+
+[dependencies.naga]
+git = "https://github.com/gfx-rs/naga"
+rev = "1f5008f"
+
+[dependencies.nom]
+git = "https://github.com/rust-bakery/nom"
+rev = "10f1f66"
+
+[dependencies.npy]
+git = "https://github.com/potocpav/npy-rs"
+rev = "42ea9dd"
+
+[dependencies.npy_derive]
+package = "npy-derive"
+git = "https://github.com/potocpav/npy-rs"
+rev = "42ea9dd"
+
+[dependencies.ntfs]
+git = "https://github.com/ColinFinck/ntfs"
+rev = "0783cbd"
+
+[[bin]]
+name = "benchmark_vec_u8"
+path = "fuzz_targets/benchmark_vec_u8.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "Arbitrary"
+path = "fuzz_targets/Arbitrary.rs"
+test = false
+doc = false
+

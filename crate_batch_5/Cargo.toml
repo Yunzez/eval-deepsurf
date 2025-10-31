@@ -1,0 +1,84 @@
+[package]
+name = "crate_batch_5"
+version = "0.1.0"
+edition = "2021"
+
+[patch.crates-io]
+
+[lib]
+path = "src/lib.rs"
+
+
+[dependencies]
+rasn = { git = "https://github.com/librasn/rasn", rev = "d9a9219" }
+# rav1e = { git = "https://github.com/xiph/rav1e", rev = "2fbca40" }
+ron = { git = "https://github.com/ron-rs/ron", rev = "caf55ce" }
+
+
+rust-ini = { git = "https://github.com/zonyitoo/rust-ini", rev = "8d5a92f" }
+rustc-demangle = { git = "https://github.com/rust-lang/rustc-demangle", rev = "48646c6" }
+
+semver = "0.9.0"
+
+sequoia-openpgp = { git = "https://gitlab.com/sequoia-pgp/sequoia", rev = "adcbb3fd" }
+serde = "1.0"
+serde_yaml = "0.8.3"
+
+simple_asn1 = { git = "https://github.com/acw/simple_asn1", rev = "b72f384" }
+
+
+snap = { git = "https://github.com/BurntSushi/rust-snappy", rev = "025b88b" }
+
+# snmp-parser = {git = "https://github.com/rusticata/snmp-parser", rev = "143efb1"}
+der-parser = "10.0.0"
+
+soroban-env-host = { git = "https://github.com/stellar/rs-soroban-env", rev = "2ceaad2" }
+
+soroban-env-common = { git = "https://github.com/stellar/rs-soroban-env", rev = "2ceaad2" }
+
+sqlparser = { git = "https://github.com/apache/datafusion-sqlparser-rs", rev = "35ef0ee" }
+
+ssh-keys = { git = "https://github.com/tailhook/ssh-keys", rev = "36fe530" }
+
+ssh-parser = { git = "https://github.com/rusticata/ssh-parser", rev = "5f197b9" }
+
+swf-parser = { git = "https://github.com/open-flash/swf-parser", rev = "3993499" }
+
+symbolic = { package = "symbolic", git = "https://github.com/getsentry/symbolic", rev = "af3e580", features = [
+    "demangle",
+    "unreal",
+] }
+
+minidump = "0.22.0"
+minidump-processor = "0.22.0"
+minidump-unwind = "0.22.0"
+
+symbolic-minidump = "=8.5.0"
+
+# symbolic-unreal = { package = "symbolic", git = "https://github.com/getsentry/symbolic", rev = "af3e580", features = [
+#     "unreal",
+# ] }
+
+# symbolic-185 = { package = "symbolic", git = "https://github.com/getsentry/symbolic", rev = "c349a96", features = [
+#     "minidump",
+# ] }
+
+
+symphonia = { git = "https://github.com/pdeljanov/Symphonia", rev = "c75a08d", features = [
+    "aac",
+] }
+
+
+syn_188 = { package = "syn", git = "https://github.com/dtolnay/syn", rev = "132bca5" }
+
+# syn_189 = { package = "syn", git = "https://github.com/dtolnay/syn", rev = "c585502" }
+
+tera_190 = {package = "tera", git= "https://github.com/Keats/tera", rev = "5495105"}
+
+sqlformat = {git = "https://github.com/shssoichiro/sqlformat-rs", rev = "62c7110"}
+
+
+raven-uxn = { git = "https://github.com/mkeeter/raven", rev = "4a6c08f" }
+
+
+unified-diff = '0.2.0'

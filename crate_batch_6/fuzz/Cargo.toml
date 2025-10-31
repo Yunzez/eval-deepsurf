@@ -1,0 +1,113 @@
+[[bin]]
+name = "fuzz_target_1"
+path = "fuzz_targets/fuzz_target_1.rs"
+test = false
+doc = false
+bench = false
+
+[package]
+name = "crate_batch_6-fuzz"
+version = "0.0.0"
+publish = false
+edition = "2021"
+
+[dependencies]
+libfuzzer-sys = "0.4"
+todotxt = "0.3.0"
+vial = "0.1"
+image = "=0.12.2"
+nom = "=2.1.0"
+wayland-commons = "=0.21.0"
+arbitrary = { version = "1", features = ["derive"] }
+
+[workspace]
+members = []
+
+[package.metadata]
+cargo-fuzz = true
+
+[dependencies.crate_batch_6]
+path = ".."
+
+[dependencies.tinytemplate]
+git = "https://github.com/bheisler/TinyTemplate"
+rev = "522605e"
+
+[dependencies.tokei]
+git = "https://github.com/XAMPPRocky/tokei"
+rev = "79a9d4c"
+
+[dependencies.toml]
+git = "https://github.com/toml-rs/toml-rs"
+rev = "7aa2594"
+
+[dependencies.ttf-parser]
+git = "https://github.com/harfbuzz/ttf-parser"
+rev = "ba4fc75"
+
+[dependencies.ubyte]
+git = "https://github.com/SergioBenitez/ubyte"
+rev = "c3cfe51"
+
+[dependencies.unicode-segmentation]
+git = "https://github.com/unicode-rs/unicode-segmentation"
+rev = "4a76978"
+
+[dependencies.url]
+git = "https://github.com/servo/rust-url"
+rev = "89876ff"
+
+[dependencies.uuid]
+git = "https://github.com/uuid-rs/uuid"
+rev = "bc7f509"
+
+[dependencies.vobsub]
+git = "https://github.com/emk/subtitles-rs"
+rev = "7b38b95"
+
+[dependencies.ws]
+git = "https://github.com/housleyjk/ws-rs"
+rev = "ec5fda6"
+
+[dependencies.yaxpeax-x86]
+git = "https://github.com/iximeow/yaxpeax-x86"
+rev = "cd98728"
+
+[dependencies.zip]
+git = "https://github.com/mvdnes/zip-rs"
+rev = "5c12e51"
+
+[[bin]]
+name = "convert_slice"
+path = "fuzz_targets/convert_slice.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "get_arg_types"
+path = "fuzz_targets/get_arg_types.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "benchmark_vec_u8"
+path = "fuzz_targets/benchmark_vec_u8.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "Arbitrary"
+path = "fuzz_targets/Arbitrary.rs"
+test = false
+doc = false
+
+
+[[bin]]
+name = "from_utf8_1"
+path = "fuzz_targets/from_utf8_1.rs"
+test = false
+doc = false
+
