@@ -1,0 +1,56 @@
+{
+  "DefId(0:53 ~ crate_batch_3[0401]::benchmark)": {
+    "full_name": "crate_batch_3::benchmark",
+    "inputs": [
+      {
+        "Reference": {
+          "Struct": {
+            "def_id": "DefId(0:42 ~ crate_batch_3[0401]::BenchmarkData)",
+            "full_name": "crate_batch_3::BenchmarkData"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:55 ~ crate_batch_3[0401]::benchmark_string_operations)": {
+    "full_name": "crate_batch_3::benchmark_string_operations",
+    "inputs": [
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:52 ~ crate_batch_3[0401]::main)": {
+    "full_name": "crate_batch_3::main",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:54 ~ crate_batch_3[0401]::benchmark_vec_u8)": {
+    "full_name": "crate_batch_3::benchmark_vec_u8",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  }
+}

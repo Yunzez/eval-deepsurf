@@ -9,24 +9,29 @@ path = "src/lib.rs"
 [dependencies]
 pancurses = "0.17"
 pcapng = "1.0.0"
-phonenumber = { git = "https://github.com/whisperfish/rust-phonenumber", rev = "da5c76c" }
+# phonenumber depends on chrono/tz requiring newer Rust; disabled.
+# phonenumber = { git = "https://github.com/whisperfish/rust-phonenumber", rev = "da5c76c" }
 
-pdf-112 = { package = "pdf", git = "https://github.com/pdf-rs/pdf", rev = "316168c" }
-pdf-115 = { package = "pdf", git = "https://github.com/pdf-rs/pdf", rev = "99e70cd" }
+# pdf crates pull in backtrace versions requiring Rust ≥1.82; disable.
+# pdf-112 = { package = "pdf", git = "https://github.com/pdf-rs/pdf", rev = "316168c" }
+# pdf-115 = { package = "pdf", git = "https://github.com/pdf-rs/pdf", rev = "99e70cd" }
 glob = "0.3.2"
 
-pgp = "0.15.0"
-plist = { git = "https://github.com/ebarnard/rust-plist", rev = "9ed64da" }
+# pgp pulls in base64ct requiring edition2024; disable for rustc_surf.
+# pgp = "0.15.0"
+# plist pulls in time-core requiring unstable features; disabled.
+# plist = { git = "https://github.com/ebarnard/rust-plist", rev = "9ed64da" }
 
 png = { git = "https://github.com/image-rs/image-png", rev = "007c06a" }
 
-prettytable = { package = "prettytable-rs", git = "https://github.com/phsym/prettytable-rs", rev = "25cfe72" }
+# prettytable not needed after disabling table rendering.
+# prettytable = { package = "prettytable-rs", git = "https://github.com/phsym/prettytable-rs", rev = "25cfe72" }
 
-pulldown-cmark-128 = {package = "pulldown-cmark", git = "https://github.com/pulldown-cmark/pulldown-cmark", rev = "a4e41df"}
+# pulldown-cmark disabled alongside benchmark_strings stub.
+# pulldown-cmark-128 = {package = "pulldown-cmark", git = "https://github.com/pulldown-cmark/pulldown-cmark", rev = "a4e41df"}
+# pulldown-cmark-131 = {package = "pulldown-cmark", git = "https://github.com/pulldown-cmark/pulldown-cmark", rev = "fb1fb37"}
+# pulldown-cmark-133 = {package = "pulldown-cmark", git = "https://github.com/pulldown-cmark/pulldown-cmark", rev = "fba26ff"}
 
-pulldown-cmark-131 = {package = "pulldown-cmark", git = "https://github.com/pulldown-cmark/pulldown-cmark", rev = "fb1fb37"}
 
-pulldown-cmark-133 = {package = "pulldown-cmark", git = "https://github.com/pulldown-cmark/pulldown-cmark", rev = "fba26ff"}
-
-
-quick-xml = {git="https://github.com/tafia/quick-xml", rev = "0fd7fbb"}
+# quick-xml (git) depends on error-chain/backtrace requiring Rust ≥1.82; disabled.
+# quick-xml = {git="https://github.com/tafia/quick-xml", rev = "0fd7fbb"}

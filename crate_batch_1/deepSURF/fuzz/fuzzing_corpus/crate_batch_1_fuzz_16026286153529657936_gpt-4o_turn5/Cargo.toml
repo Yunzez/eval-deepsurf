@@ -1,0 +1,16 @@
+[workspace]
+
+[package]
+name = "crate_batch_1_fuzz_16026286153529657936"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "crate_batch_1_fuzz_16026286153529657936"
+path = "src/crate_batch_1_fuzz_16026286153529657936.rs"
+
+[dependencies]
+afl = "=0.15.7"
+home = "=0.5.9"
+global_data = { path = "/workspace/deepSURF/code/global_data" }
+crate_batch_1 = { path = "/workspace/crate_batch_1" }

@@ -12,7 +12,8 @@ tinytemplate = {git = "https://github.com/bheisler/TinyTemplate", rev = "522605e
 
 todotxt = "0.3.0"
 
-tokei = {git = "https://github.com/XAMPPRocky/tokei", rev = "79a9d4c"}
+# tokei pulls in globset 0.4.18 which requires the unstable edition2024; disable for rustc_surf.
+# tokei = {git = "https://github.com/XAMPPRocky/tokei", rev = "79a9d4c"}
 
 toml ={ git="https://github.com/toml-rs/toml-rs", rev="7aa2594"}
 

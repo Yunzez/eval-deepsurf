@@ -1,0 +1,223 @@
+{
+  "DefId(0:40 ~ crate_batch_4[a31a]::benchmark_vec_u8)": {
+    "name": "crate_batch_4::benchmark_vec_u8",
+    "full_name": "crate_batch_4::benchmark_vec_u8",
+    "def_path_str": "benchmark_vec_u8::/workspace/crate_batch_4/src/lib.rs::139",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:35 ~ crate_batch_4[a31a]::align_from_u8)": {
+    "name": "crate_batch_4::align_from_u8",
+    "full_name": "crate_batch_4::align_from_u8",
+    "def_path_str": "align_from_u8::/workspace/crate_batch_4/src/lib.rs::97",
+    "inputs": [
+      {
+        "Primitive": "u8"
+      }
+    ],
+    "output": {
+      "Enum": {
+        "def_id": "DefId(58:445 ~ prettytable[7503]::format::Alignment)",
+        "name": "prettytable::format::Alignment",
+        "full_name": "prettytable::format::Alignment",
+        "is_consumable": false
+      }
+    },
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:34 ~ crate_batch_4[a31a]::main)": {
+    "name": "crate_batch_4::main",
+    "full_name": "crate_batch_4::main",
+    "def_path_str": "main::/workspace/crate_batch_4/src/lib.rs::90",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:36 ~ crate_batch_4[a31a]::run_table)": {
+    "name": "crate_batch_4::run_table",
+    "full_name": "crate_batch_4::run_table",
+    "def_path_str": "run_table::/workspace/crate_batch_4/src/lib.rs::107",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Struct": {
+                "def_id": "DefId(0:29 ~ crate_batch_4[a31a]::TableRowData)",
+                "name": "crate_batch_4::TableRowData",
+                "full_name": "crate_batch_4::TableRowData",
+                "is_consumable": false
+              }
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:41 ~ crate_batch_4[a31a]::benchmark_strings)": {
+    "name": "crate_batch_4::benchmark_strings",
+    "full_name": "crate_batch_4::benchmark_strings",
+    "def_path_str": "benchmark_strings::/workspace/crate_batch_4/src/lib.rs::214",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:38 ~ crate_batch_4[a31a]::benchmark)": {
+    "name": "crate_batch_4::benchmark",
+    "full_name": "crate_batch_4::benchmark",
+    "def_path_str": "benchmark::/workspace/crate_batch_4/src/lib.rs::123",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Struct": {
+              "def_id": "DefId(0:19 ~ crate_batch_4[a31a]::BenchmarkData)",
+              "name": "crate_batch_4::BenchmarkData",
+              "full_name": "crate_batch_4::BenchmarkData",
+              "is_consumable": false
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:43 ~ crate_batch_4[a31a]::decode_png)": {
+    "name": "crate_batch_4::decode_png",
+    "full_name": "crate_batch_4::decode_png",
+    "def_path_str": "decode_png::/workspace/crate_batch_4/src/lib.rs::284",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": {
+      "Result": {
+        "ok": {
+          "Vector": {
+            "Primitive": "u8"
+          }
+        },
+        "err": "std::io::Error"
+      }
+    },
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  }
+}

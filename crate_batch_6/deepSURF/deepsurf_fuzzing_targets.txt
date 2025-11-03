@@ -1,0 +1,52 @@
+deepSURF: Generated Targets to be Fuzzed
+------------------------------------------------------------------------------------------------------------------------------------
+  StableURAPI: benchmark_vec_u8::/workspace/crate_batch_6/src/lib.rs::281,
+    - URAPI: DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8),
+    - Macro-expanded: false,
+    - LLM-improved: true,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_5130697570958458892_gpt-4o_turn2
+      * crate_batch_6_fuzz_17997780617928745793_gpt-4o_turn1
+      * crate_batch_6_fuzz_9306830355928128974_gpt-4o_turn4
+  StableURAPI: benchmark_misc::/workspace/crate_batch_6/src/lib.rs::389,
+    - URAPI: DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_17997780617928745793
+  StableURAPI: get_arg_types::/workspace/crate_batch_6/src/lib.rs::148,
+    - URAPI: DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types),
+    - Macro-expanded: false,
+    - LLM-improved: true,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_17997780617928745793_gpt-4o_turn1
+      * crate_batch_6_fuzz_5130697570958458892_gpt-4o_turn2
+      * crate_batch_6_fuzz_9306830355928128974_gpt-4o_turn4
+  StableURAPI: benchmark::/workspace/crate_batch_6/src/lib.rs::174,
+    - URAPI: DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc),
+    - Macro-expanded: false,
+    - LLM-improved: true,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_17997780617928745793_gpt-4o_turn1
+      * crate_batch_6_fuzz_9306830355928128974_gpt-4o_turn4
+  StableURAPI: benchmark_template_and_strings::/workspace/crate_batch_6/src/lib.rs::180,
+    - URAPI: DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings),
+    - Macro-expanded: false,
+    - LLM-improved: true,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_5130697570958458892_gpt-4o_turn2
+      * crate_batch_6_fuzz_9306830355928128974_gpt-4o_turn4
+      * crate_batch_6_fuzz_17997780617928745793_gpt-4o_turn1
+  StableURAPI: main::/workspace/crate_batch_6/src/lib.rs::97,
+    - URAPI: DefId(0:37 ~ crate_batch_6[edbb]::main),
+    - Macro-expanded: false,
+    - LLM-improved: true,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_9306830355928128974_gpt-4o_turn4
+  StableURAPI: convert_slice::/workspace/crate_batch_6/src/lib.rs::133,
+    - URAPI: DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8),
+    - Macro-expanded: false,
+    - LLM-improved: true,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_5130697570958458892_gpt-4o_turn2
+------------------------------------------------------------------------------------------------------------------------------------

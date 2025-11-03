@@ -1,0 +1,223 @@
+{
+  "DefId(0:48 ~ crate_batch_5[b768]::test_decode)": {
+    "name": "crate_batch_5::test_decode",
+    "full_name": "crate_batch_5::test_decode",
+    "def_path_str": "test_decode::/workspace/crate_batch_5/src/lib.rs::115",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": {
+      "Result": {
+        "ok": {
+          "Tuple": []
+        },
+        "err": "symphonia::symphonia_core::errors::Error"
+      }
+    },
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_5",
+    "reachable_unresolved_callees": {
+      "DefId(144:416 ~ symphonia_core[870e]::codecs::Decoder)": [
+        "DefId(144:421 ~ symphonia_core[870e]::codecs::Decoder::decode)"
+      ],
+      "DefId(144:672 ~ symphonia_core[870e]::formats::FormatReader)": [
+        "DefId(144:678 ~ symphonia_core[870e]::formats::FormatReader::default_track)",
+        "DefId(144:679 ~ symphonia_core[870e]::formats::FormatReader::next_packet)"
+      ]
+    }
+  },
+  "DefId(0:56 ~ crate_batch_5[b768]::benchmark_numeric)": {
+    "name": "crate_batch_5::benchmark_numeric",
+    "full_name": "crate_batch_5::benchmark_numeric",
+    "def_path_str": "benchmark_numeric::/workspace/crate_batch_5/src/lib.rs::245",
+    "inputs": [
+      {
+        "Primitive": "u64"
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_5",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:50 ~ crate_batch_5[b768]::benchmark)": {
+    "name": "crate_batch_5::benchmark",
+    "full_name": "crate_batch_5::benchmark",
+    "def_path_str": "benchmark::/workspace/crate_batch_5/src/lib.rs::149",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Struct": {
+              "def_id": "DefId(0:37 ~ crate_batch_5[b768]::BenchmarkData)",
+              "name": "crate_batch_5::BenchmarkData",
+              "full_name": "crate_batch_5::BenchmarkData",
+              "is_consumable": false
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_5",
+    "reachable_unresolved_callees": {
+      "DefId(144:416 ~ symphonia_core[870e]::codecs::Decoder)": [
+        "DefId(144:421 ~ symphonia_core[870e]::codecs::Decoder::decode)"
+      ],
+      "DefId(144:672 ~ symphonia_core[870e]::formats::FormatReader)": [
+        "DefId(144:678 ~ symphonia_core[870e]::formats::FormatReader::default_track)",
+        "DefId(144:679 ~ symphonia_core[870e]::formats::FormatReader::next_packet)"
+      ]
+    }
+  },
+  "DefId(0:47 ~ crate_batch_5[b768]::main)": {
+    "name": "crate_batch_5::main",
+    "full_name": "crate_batch_5::main",
+    "def_path_str": "main::/workspace/crate_batch_5/src/lib.rs::108",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_5",
+    "reachable_unresolved_callees": {
+      "DefId(144:416 ~ symphonia_core[870e]::codecs::Decoder)": [
+        "DefId(144:421 ~ symphonia_core[870e]::codecs::Decoder::decode)"
+      ],
+      "DefId(144:672 ~ symphonia_core[870e]::formats::FormatReader)": [
+        "DefId(144:678 ~ symphonia_core[870e]::formats::FormatReader::default_track)",
+        "DefId(144:679 ~ symphonia_core[870e]::formats::FormatReader::next_packet)"
+      ]
+    }
+  },
+  "DefId(0:52 ~ crate_batch_5[b768]::benchmark_vec_u8)": {
+    "name": "crate_batch_5::benchmark_vec_u8",
+    "full_name": "crate_batch_5::benchmark_vec_u8",
+    "def_path_str": "benchmark_vec_u8::/workspace/crate_batch_5/src/lib.rs::157",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      },
+      {
+        "Primitive": "u64"
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_5",
+    "reachable_unresolved_callees": {
+      "DefId(144:416 ~ symphonia_core[870e]::codecs::Decoder)": [
+        "DefId(144:421 ~ symphonia_core[870e]::codecs::Decoder::decode)"
+      ],
+      "DefId(144:672 ~ symphonia_core[870e]::formats::FormatReader)": [
+        "DefId(144:678 ~ symphonia_core[870e]::formats::FormatReader::default_track)",
+        "DefId(144:679 ~ symphonia_core[870e]::formats::FormatReader::next_packet)"
+      ]
+    }
+  },
+  "DefId(0:57 ~ crate_batch_5[b768]::benchmark_string_ops)": {
+    "name": "crate_batch_5::benchmark_string_ops",
+    "full_name": "crate_batch_5::benchmark_string_ops",
+    "def_path_str": "benchmark_string_ops::/workspace/crate_batch_5/src/lib.rs::275",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_5",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:62 ~ crate_batch_5[b768]::benchmark_misc)": {
+    "name": "crate_batch_5::benchmark_misc",
+    "full_name": "crate_batch_5::benchmark_misc",
+    "def_path_str": "benchmark_misc::/workspace/crate_batch_5/src/lib.rs::331",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_5",
+    "reachable_unresolved_callees": {}
+  }
+}

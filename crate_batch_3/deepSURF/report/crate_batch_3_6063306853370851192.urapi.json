@@ -1,0 +1,110 @@
+{
+  "DefId(0:32 ~ crate_batch_3[5425]::benchmark_vec_u8)": {
+    "name": "crate_batch_3::benchmark_vec_u8",
+    "full_name": "crate_batch_3::benchmark_vec_u8",
+    "def_path_str": "benchmark_vec_u8::/workspace/crate_batch_3/src/lib.rs::118",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_3",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:31 ~ crate_batch_3[5425]::benchmark)": {
+    "name": "crate_batch_3::benchmark",
+    "full_name": "crate_batch_3::benchmark",
+    "def_path_str": "benchmark::/workspace/crate_batch_3/src/lib.rs::113",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Struct": {
+              "def_id": "DefId(0:20 ~ crate_batch_3[5425]::BenchmarkData)",
+              "name": "crate_batch_3::BenchmarkData",
+              "full_name": "crate_batch_3::BenchmarkData",
+              "is_consumable": false
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_3",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:33 ~ crate_batch_3[5425]::benchmark_string_operations)": {
+    "name": "crate_batch_3::benchmark_string_operations",
+    "full_name": "crate_batch_3::benchmark_string_operations",
+    "def_path_str": "benchmark_string_operations::/workspace/crate_batch_3/src/lib.rs::210",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_3",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:30 ~ crate_batch_3[5425]::main)": {
+    "name": "crate_batch_3::main",
+    "full_name": "crate_batch_3::main",
+    "def_path_str": "main::/workspace/crate_batch_3/src/lib.rs::106",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_3",
+    "reachable_unresolved_callees": {}
+  }
+}

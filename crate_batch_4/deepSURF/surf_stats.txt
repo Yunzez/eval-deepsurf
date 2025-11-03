@@ -1,0 +1,45 @@
+
+Total Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPI Coverage: 4/7 (57.14%).
+* Targets Compiled: 4/5 (80.00%) in [27.461213312s].
+------------------------------------------------------------------------------------------------------------------------------------
+
+Target Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPIs w/ ≥ 1ft: 4/7 (57.14%).
+* Average Generation Time per Target: 46.072015999s/4 (11.518003999s).
+
+* URAPIs w/ ≥ 2ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 3ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 4ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/o any compilable targets: 3/7 (42.86%).
+------------------------------------------------------------------------------------------------------------------------------------
+
+Detailed Results: 
+------------------------------------------------------------------------------------------------------------------------------------
+  URAPI: DefId(0:40 ~ crate_batch_4[98c8]::run_table),
+    - 0 targets generated.
+  URAPI: DefId(0:44 ~ crate_batch_4[98c8]::benchmark_vec_u8),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_4_fuzz_8746160299732535655 [11.59493522s]
+  URAPI: DefId(0:38 ~ crate_batch_4[98c8]::main),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_4_fuzz_5927952589163955769 [11.627028817s]
+  URAPI: DefId(0:48 ~ crate_batch_4[98c8]::decode_png),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_4_fuzz_16422819160411493718 [11.372678049s]
+  URAPI: DefId(0:42 ~ crate_batch_4[98c8]::benchmark),
+    - 0 targets generated.
+  URAPI: DefId(0:39 ~ crate_batch_4[98c8]::align_from_u8),
+    - Compilable Targets (0/1 ~ 0.00%):
+  URAPI: DefId(0:46 ~ crate_batch_4[98c8]::benchmark_strings),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_4_fuzz_3849529532662044554 [11.477373913s]
+------------------------------------------------------------------------------------------------------------------------------------

@@ -1,0 +1,124 @@
+{
+  "DefId(0:18 ~ crate_batch_1[8aec]::benchmark)": {
+    "name": "crate_batch_1::benchmark",
+    "full_name": "crate_batch_1::benchmark",
+    "def_path_str": "benchmark::/workspace/crate_batch_1/src/lib.rs::99",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Struct": {
+              "def_id": "DefId(0:7 ~ crate_batch_1[8aec]::BenchmarkData)",
+              "name": "crate_batch_1::BenchmarkData",
+              "full_name": "crate_batch_1::BenchmarkData",
+              "is_consumable": false
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_1",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:20 ~ crate_batch_1[8aec]::benchmark_vec_u8)": {
+    "name": "crate_batch_1::benchmark_vec_u8",
+    "full_name": "crate_batch_1::benchmark_vec_u8",
+    "def_path_str": "benchmark_vec_u8::/workspace/crate_batch_1/src/lib.rs::165",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Vector": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      },
+      {
+        "Primitive": "u64"
+      },
+      {
+        "Reference": [
+          {
+            "Array": [
+              {
+                "Primitive": "u8"
+              },
+              "64"
+            ]
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_1",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:17 ~ crate_batch_1[8aec]::main)": {
+    "name": "crate_batch_1::main",
+    "full_name": "crate_batch_1::main",
+    "def_path_str": "main::/workspace/crate_batch_1/src/lib.rs::91",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_1",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:19 ~ crate_batch_1[8aec]::benchmark_string)": {
+    "name": "crate_batch_1::benchmark_string",
+    "full_name": "crate_batch_1::benchmark_string",
+    "def_path_str": "benchmark_string::/workspace/crate_batch_1/src/lib.rs::105",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_1",
+    "reachable_unresolved_callees": {}
+  }
+}

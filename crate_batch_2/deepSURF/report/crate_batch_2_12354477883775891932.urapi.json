@@ -1,0 +1,124 @@
+{
+  "DefId(0:37 ~ crate_batch_2[ab73]::benchmark_vec_u8)": {
+    "name": "crate_batch_2::benchmark_vec_u8",
+    "full_name": "crate_batch_2::benchmark_vec_u8",
+    "def_path_str": "benchmark_vec_u8::/workspace/crate_batch_2/src/lib.rs::107",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_2",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:34 ~ crate_batch_2[ab73]::benchmark)": {
+    "name": "crate_batch_2::benchmark",
+    "full_name": "crate_batch_2::benchmark",
+    "def_path_str": "benchmark::/workspace/crate_batch_2/src/lib.rs::84",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Struct": {
+              "def_id": "DefId(0:23 ~ crate_batch_2[ab73]::BenchmarkData)",
+              "name": "crate_batch_2::BenchmarkData",
+              "full_name": "crate_batch_2::BenchmarkData",
+              "is_consumable": false
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_2",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:39 ~ crate_batch_2[ab73]::benchmark_strings)": {
+    "name": "crate_batch_2::benchmark_strings",
+    "full_name": "crate_batch_2::benchmark_strings",
+    "def_path_str": "benchmark_strings::/workspace/crate_batch_2/src/lib.rs::178",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_2",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:33 ~ crate_batch_2[ab73]::main)": {
+    "name": "crate_batch_2::main",
+    "full_name": "crate_batch_2::main",
+    "def_path_str": "main::/workspace/crate_batch_2/src/lib.rs::78",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_2",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:35 ~ crate_batch_2[ab73]::benchmark_artifacts)": {
+    "name": "crate_batch_2::benchmark_artifacts",
+    "full_name": "crate_batch_2::benchmark_artifacts",
+    "def_path_str": "benchmark_artifacts::/workspace/crate_batch_2/src/lib.rs::90",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_2",
+    "reachable_unresolved_callees": {}
+  }
+}

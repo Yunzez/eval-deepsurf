@@ -1,0 +1,101 @@
+{
+  "DefId(0:72 ~ crate_batch_5[16e3]::benchmark_misc)": {
+    "full_name": "crate_batch_5::benchmark_misc",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:59 ~ crate_batch_5[16e3]::benchmark_vec_u8)": {
+    "full_name": "crate_batch_5::benchmark_vec_u8",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      },
+      {
+        "Primitive": "u64"
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:55 ~ crate_batch_5[16e3]::test_decode)": {
+    "full_name": "crate_batch_5::test_decode",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": {
+      "Result": {
+        "ok": {
+          "Tuple": []
+        },
+        "err": "symphonia::symphonia_core::errors::Error"
+      }
+    },
+    "implicit_generics": []
+  },
+  "DefId(0:63 ~ crate_batch_5[16e3]::benchmark_numeric)": {
+    "full_name": "crate_batch_5::benchmark_numeric",
+    "inputs": [
+      {
+        "Primitive": "u64"
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:65 ~ crate_batch_5[16e3]::benchmark_string_ops)": {
+    "full_name": "crate_batch_5::benchmark_string_ops",
+    "inputs": [
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:57 ~ crate_batch_5[16e3]::benchmark)": {
+    "full_name": "crate_batch_5::benchmark",
+    "inputs": [
+      {
+        "Reference": {
+          "Struct": {
+            "def_id": "DefId(0:44 ~ crate_batch_5[16e3]::BenchmarkData)",
+            "full_name": "crate_batch_5::BenchmarkData"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:54 ~ crate_batch_5[16e3]::main)": {
+    "full_name": "crate_batch_5::main",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  }
+}

@@ -1,0 +1,27 @@
+SURF: Generated Targets to be Fuzzed
+------------------------------------------------------------------------------------------------------------------------------------
+  StableURAPI: main::/workspace/crate_batch_4/src/lib.rs::91,
+    - URAPI: DefId(0:38 ~ crate_batch_4[98c8]::main),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_4_fuzz_5927952589163955769
+  StableURAPI: benchmark_vec_u8::/workspace/crate_batch_4/src/lib.rs::140,
+    - URAPI: DefId(0:44 ~ crate_batch_4[98c8]::benchmark_vec_u8),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_4_fuzz_8746160299732535655
+  StableURAPI: decode_png::/workspace/crate_batch_4/src/lib.rs::285,
+    - URAPI: DefId(0:48 ~ crate_batch_4[98c8]::decode_png),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_4_fuzz_16422819160411493718
+  StableURAPI: benchmark_strings::/workspace/crate_batch_4/src/lib.rs::215,
+    - URAPI: DefId(0:46 ~ crate_batch_4[98c8]::benchmark_strings),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_4_fuzz_3849529532662044554
+------------------------------------------------------------------------------------------------------------------------------------

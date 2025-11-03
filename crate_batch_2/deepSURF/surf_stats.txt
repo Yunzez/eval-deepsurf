@@ -1,0 +1,41 @@
+
+Total Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPI Coverage: 4/5 (80.00%).
+* Targets Compiled: 4/4 (100.00%) in [418.015117492s].
+------------------------------------------------------------------------------------------------------------------------------------
+
+Target Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPIs w/ ≥ 1ft: 4/5 (80.00%).
+* Average Generation Time per Target: 216.51512689s/4 (54.128781722s).
+
+* URAPIs w/ ≥ 2ft: 0/5 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 3ft: 0/5 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 4ft: 0/5 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/o any compilable targets: 1/5 (20.00%).
+------------------------------------------------------------------------------------------------------------------------------------
+
+Detailed Results: 
+------------------------------------------------------------------------------------------------------------------------------------
+  URAPI: DefId(0:37 ~ crate_batch_2[ab73]::benchmark_vec_u8),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_2_fuzz_17762285307274427433 [53.289110619s]
+  URAPI: DefId(0:34 ~ crate_batch_2[ab73]::benchmark),
+    - 0 targets generated.
+  URAPI: DefId(0:33 ~ crate_batch_2[ab73]::main),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_2_fuzz_5013163950312134626 [54.199930599s]
+  URAPI: DefId(0:39 ~ crate_batch_2[ab73]::benchmark_strings),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_2_fuzz_4675919745659301435 [54.770539451s]
+  URAPI: DefId(0:35 ~ crate_batch_2[ab73]::benchmark_artifacts),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_2_fuzz_5105351968334001418 [54.255546221s]
+------------------------------------------------------------------------------------------------------------------------------------

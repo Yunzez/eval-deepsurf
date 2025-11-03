@@ -1,0 +1,12 @@
+{
+  "DefId(96:293 ~ wayland_commons[6fd0]::wire::ArgumentType)": {
+    "wayland_commons::wire::ArgumentType::Fixed": [],
+    "wayland_commons::wire::ArgumentType::NewId": [],
+    "wayland_commons::wire::ArgumentType::Int": [],
+    "wayland_commons::wire::ArgumentType::Object": [],
+    "wayland_commons::wire::ArgumentType::Str": [],
+    "wayland_commons::wire::ArgumentType::Array": [],
+    "wayland_commons::wire::ArgumentType::Uint": [],
+    "wayland_commons::wire::ArgumentType::Fd": []
+  }
+}

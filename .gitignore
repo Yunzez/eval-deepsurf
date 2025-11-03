@@ -1,2 +1,8 @@
 **/target
 **/out
+**/cargo-lock.json
+**/fuzz/llm
+**/fuzz/no_llm
+**/fuzz/fuzzing_corpus/**/bins
+**/replay
+**/target-user

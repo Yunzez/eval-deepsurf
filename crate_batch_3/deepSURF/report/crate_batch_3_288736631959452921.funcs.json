@@ -1,0 +1,145 @@
+{
+  "DefId(0:61 ~ crate_batch_3[0401]::{impl#1}::read_row)": {
+    "name": "<Array as npy::NpyData>::read_row",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Array as npy::NpyData>",
+        "impl_tr_name": "DefId(21:119 ~ npy[f8ce]::npy_data::NpyData)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:55 ~ crate_batch_3[0401]::benchmark_string_operations)": {
+    "name": "benchmark_string_operations",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:53 ~ crate_batch_3[0401]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:52 ~ crate_batch_3[0401]::main)",
+      "DefId(0:53 ~ crate_batch_3[0401]::benchmark)",
+      "DefId(0:55 ~ crate_batch_3[0401]::benchmark_string_operations)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:52 ~ crate_batch_3[0401]::main)": {
+    "name": "main",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:65 ~ crate_batch_3[0401]::{impl#2}::fmt)": {
+    "name": "<Array as std::fmt::Debug>::fmt",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Array as std::fmt::Debug>",
+        "impl_tr_name": "DefId(2:10411 ~ core[b693]::fmt::Debug)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:62 ~ crate_batch_3[0401]::{impl#1}::write_row)": {
+    "name": "<Array as npy::NpyData>::write_row",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Array as npy::NpyData>",
+        "impl_tr_name": "DefId(21:119 ~ npy[f8ce]::npy_data::NpyData)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:53 ~ crate_batch_3[0401]::benchmark)": {
+    "name": "benchmark",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:52 ~ crate_batch_3[0401]::main)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:50 ~ crate_batch_3[0401]::{impl#0}::default)": {
+    "name": "<BenchmarkData as std::default::Default>::default",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PubFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<BenchmarkData as std::default::Default>",
+        "impl_tr_name": "DefId(2:3041 ~ core[b693]::default::Default)"
+      }
+    },
+    "callers": [
+      "DefId(0:52 ~ crate_batch_3[0401]::main)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:66 ~ crate_batch_3[0401]::benchmark_vec_u8::parser01)": {
+    "name": "benchmark_vec_u8::parser01",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PrvFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:54 ~ crate_batch_3[0401]::benchmark_vec_u8)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:60 ~ crate_batch_3[0401]::{impl#1}::get_dtype)": {
+    "name": "<Array as npy::NpyData>::get_dtype",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Array as npy::NpyData>",
+        "impl_tr_name": "DefId(21:119 ~ npy[f8ce]::npy_data::NpyData)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:54 ~ crate_batch_3[0401]::benchmark_vec_u8)": {
+    "name": "benchmark_vec_u8",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_3",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:53 ~ crate_batch_3[0401]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:52 ~ crate_batch_3[0401]::main)",
+      "DefId(0:53 ~ crate_batch_3[0401]::benchmark)",
+      "DefId(0:54 ~ crate_batch_3[0401]::benchmark_vec_u8)"
+    ],
+    "unresolved_callees": []
+  }
+}

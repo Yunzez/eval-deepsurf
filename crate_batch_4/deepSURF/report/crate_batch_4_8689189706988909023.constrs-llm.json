@@ -1,0 +1,17 @@
+{
+  "DefId(0:36 ~ crate_batch_4[7896]::align_from_u8)": {
+    "full_name": "crate_batch_4::align_from_u8",
+    "inputs": [
+      {
+        "Primitive": "u8"
+      }
+    ],
+    "output": {
+      "Enum": {
+        "def_id": "DefId(58:445 ~ prettytable[7503]::format::Alignment)",
+        "full_name": "prettytable::format::Alignment"
+      }
+    },
+    "implicit_generics": []
+  }
+}

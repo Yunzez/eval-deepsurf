@@ -1,0 +1,15 @@
+{
+  "PrvFn": {
+    "SafeFn": 5,
+    "UnsafeFn": 0,
+    "Total": 5,
+    "UnsafeBlockFn": 0
+  },
+  "PubFn": {
+    "SafeFn": 3,
+    "UnsafeFn": 0,
+    "APIsReachUnsafe": 4,
+    "Total": 5,
+    "UnsafeBlockFn": 2
+  }
+}

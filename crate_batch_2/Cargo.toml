@@ -7,23 +7,30 @@ path = "src/lib.rs"
 [dependencies]
 flif={git="https://github.com/ZoeyR/flif.rs", rev="a3e7784"}
 fontdue={git="https://github.com/mooman219/fontdue", rev="4772807"}
-geo = "0.29.3"
+# geo depends on spade >=2.15 which requires nightly features; disable.
+# geo = "0.29.3"
 goblin = {git="https://github.com/m4b/goblin", rev="c7cd994"}
-h2 = {git="https://github.com/hyperium/h2", rev="308663e"}
+# h2 (via hyper) pulls in url 2.5/icu requiring Rust >=1.82; disable for rustc_surf.
+# h2 = {git="https://github.com/hyperium/h2", rev="308663e"}
 
 # for both 45, 46, they are the same version 
 handlebars={package = "handlebars", git = "https://github.com/sunng87/handlebars-rust", rev="880486b"}
 serde = "*"
 serde-hjson = {git="https://github.com/hjson/hjson-rust", rev="6b76180"}
+# human_name = {git="https://github.com/djudd/human-name", rev="2bcfc22"}
 human_name = {git="https://github.com/djudd/human-name", rev="2bcfc22"}
-hyper={git="https://github.com/hyperium/hyper", rev="6eb0753"}
+# hyper pulls in url 2.5/icu requiring Rust >=1.82; disable for rustc_surf.
+# hyper={git="https://github.com/hyperium/hyper", rev="6eb0753"}
 image = {git="https://github.com/image-rs/image", rev = "63bbe70"}
 gif = {git="https://github.com/image-rs/image-gif", rev = "167bc0f"}
 jpeg-decoder-63={package="jpeg-decoder", git = "https://github.com/image-rs/jpeg-decoder", rev = "8a8d331"}
 jpeg-decoder-64={package="jpeg-decoder", git = "https://github.com/image-rs/jpeg-decoder", rev = "ee4fc87"}
 fancy-regex= {git="https://github.com/fancy-regex/fancy-regex", rev="f99e5f6"}
 
-jsonschema = {git = "https://github.com/Stranger6667/jsonschema", rev = "d7b6919"}
-juniper={git="https://github.com/graphql-rust/juniper"   , rev="52aea4d"}
-just = {package="just", git ="https://github.com/casey/just", rev="8371ada"}
-kalker = "2.1.1"
+# jsonschema depends on icu components requiring Rust >=1.83; disable.
+# jsonschema = {git = "https://github.com/Stranger6667/jsonschema", rev = "d7b6919"}
+# juniper and just pull in modern dependencies; disable for rustc_surf.
+# juniper={git="https://github.com/graphql-rust/juniper"   , rev="52aea4d"}
+# just = {package="just", git ="https://github.com/casey/just", rev="8371ada"}
+# kalker pulls in rug which requires Rust edition2024; disable for rustc_surf toolchain.
+# kalker = "2.1.1"

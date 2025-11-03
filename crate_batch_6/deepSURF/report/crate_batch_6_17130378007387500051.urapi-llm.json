@@ -1,0 +1,119 @@
+{
+  "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)": {
+    "full_name": "crate_batch_6::benchmark_vec_u8",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:37 ~ crate_batch_6[edbb]::main)": {
+    "full_name": "crate_batch_6::main",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types)": {
+    "full_name": "crate_batch_6::get_arg_types",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": {
+      "Option": {
+        "Array": {
+          "inner_ty": {
+            "Enum": {
+              "def_id": "DefId(127:293 ~ wayland_commons[6fd0]::wire::ArgumentType)",
+              "full_name": "wayland_commons::wire::ArgumentType"
+            }
+          },
+          "size": "16"
+        }
+      }
+    },
+    "implicit_generics": []
+  },
+  "DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings)": {
+    "full_name": "crate_batch_6::benchmark_template_and_strings",
+    "inputs": [
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Primitive": "u64"
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)": {
+    "full_name": "crate_batch_6::benchmark",
+    "inputs": [
+      {
+        "Reference": {
+          "Struct": {
+            "def_id": "DefId(0:27 ~ crate_batch_6[edbb]::BenchmarkData)",
+            "full_name": "crate_batch_6::BenchmarkData"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc)": {
+    "full_name": "crate_batch_6::benchmark_misc",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:46 ~ crate_batch_6[edbb]::convert_slice)": {
+    "full_name": "crate_batch_6::convert_slice",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": {
+      "Option": {
+        "Reference": {
+          "Slice": {
+            "Generic": {
+              "name": "T"
+            }
+          }
+        }
+      }
+    },
+    "implicit_generics": [
+      {
+        "Generic": {
+          "name": "T"
+        }
+      }
+    ]
+  }
+}

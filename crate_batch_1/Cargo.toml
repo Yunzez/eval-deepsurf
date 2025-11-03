@@ -8,15 +8,18 @@ path = "src/lib.rs"
 
 
 [dependencies]
-alloy-json-abi = { git = "https://github.com/alloy-rs/core", rev = "6540523"}
+# alloy-json-abi pulls in ruint >=1.17 which requires Cargo edition2024; disable for now to avoid nightly feature.
+# alloy-json-abi = { git = "https://github.com/alloy-rs/core", rev = "6540523"}
 
 bcrypt = {git="https://github.com/Keats/rust-bcrypt", rev="f9a87be"}
-async-h1 = "2.3.4"
+# async-h1 pulls http-types -> url 2.5.x -> idna_adapter/ICU requiring Rust >=1.82; disable
+# async-h1 = "2.3.4"
 bincode-6 = {package = "bincode", git="https://github.com/bincode-org/bincode", rev="a14ea97"}
 bincode-7 ={ package = "bincode", git = "https://github.com/bincode-org/bincode", rev = "4fea079" }
-bson-10 = {package = "bson", git="https://github.com/mongodb/bson-rust", rev="aff67d1"}
-bson-11 = {package = "bson", git="https://github.com/mongodb/bson-rust",rev="60745f1"}
-bson-12 = {package = "bson", git="https://github.com/mongodb/bson-rust",rev="b069ef5"}
+# bson depends on serde_json which pulls indexmap 2.12 requiring Rust >=1.82; disable
+# bson-10 = {package = "bson", git="https://github.com/mongodb/bson-rust", rev="aff67d1"}
+# bson-11 = {package = "bson", git="https://github.com/mongodb/bson-rust",rev="60745f1"}
+# bson-12 = {package = "bson", git="https://github.com/mongodb/bson-rust",rev="b069ef5"}
 # boa_parser = { git = "https://github.com/boa-dev/boa", rev = "55e85ad" }
 chrono-16 = {package = "chrono", git="https://github.com/chronotope/chrono",rev="4545f9e"}
 chrono-17 = {package = "chrono", git="https://github.com/chronotope/chrono",rev="0f1a635"}
@@ -30,10 +33,12 @@ cranelift_reader = {package = "cranelift-reader", git="https://github.com/byteco
 
 csscolorparser = {git="https://github.com/mazznoer/csscolorparser-rs", rev="bca33b5"}
 cssparser = "0.34.0"
-cursive = "0.21"
+# cursive pulls serde_json (and transitive MSRV bumps); disable
+# cursive = "0.21"
 der={git="https://github.com/RustCrypto/formats", rev="9827820"}
 der-parser={git = "https://github.com/rusticata/der-parser", rev="69739bb"}
 exmex = {git="https://github.com/bertiqwerty/exmex", rev="3c29e56"}
 fatfs = "0.3.6"
 flac = "0.5.0"
-flatgeobuf = {git="https://github.com/flatgeobuf/flatgeobuf", rev="25a0456"} 
+# flatgeobuf pulls reqwest -> url 2.5.x -> idna_adapter/ICU requiring Rust >=1.82; disable
+# flatgeobuf = {git="https://github.com/flatgeobuf/flatgeobuf", rev="25a0456"} 

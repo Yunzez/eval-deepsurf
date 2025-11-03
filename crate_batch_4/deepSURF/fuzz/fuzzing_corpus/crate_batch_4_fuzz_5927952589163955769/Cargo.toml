@@ -1,0 +1,16 @@
+[workspace]
+
+[package]
+name = "crate_batch_4_fuzz_5927952589163955769"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "crate_batch_4_fuzz_5927952589163955769"
+path = "src/crate_batch_4_fuzz_5927952589163955769.rs"
+
+[dependencies]
+afl = "=0.15.7"
+home = "=0.5.9"
+global_data = { path = "/root/deepSURF/code/global_data" }
+crate_batch_4 = { path = "/workspace/crate_batch_4/" }

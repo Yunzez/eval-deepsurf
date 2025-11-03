@@ -1,0 +1,67 @@
+{
+  "DefId(0:18 ~ crate_batch_1[8aec]::benchmark)": {
+    "full_name": "crate_batch_1::benchmark",
+    "inputs": [
+      {
+        "Reference": {
+          "Struct": {
+            "def_id": "DefId(0:7 ~ crate_batch_1[8aec]::BenchmarkData)",
+            "full_name": "crate_batch_1::BenchmarkData"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:20 ~ crate_batch_1[8aec]::benchmark_vec_u8)": {
+    "full_name": "crate_batch_1::benchmark_vec_u8",
+    "inputs": [
+      {
+        "Reference": {
+          "Vector": {
+            "Primitive": "u8"
+          }
+        }
+      },
+      {
+        "Primitive": "u64"
+      },
+      {
+        "Reference": {
+          "Array": {
+            "inner_ty": {
+              "Primitive": "u8"
+            },
+            "size": "64"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:17 ~ crate_batch_1[8aec]::main)": {
+    "full_name": "crate_batch_1::main",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:19 ~ crate_batch_1[8aec]::benchmark_string)": {
+    "full_name": "crate_batch_1::benchmark_string",
+    "inputs": [
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  }
+}

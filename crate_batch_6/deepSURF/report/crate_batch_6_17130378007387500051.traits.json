@@ -1,0 +1,10 @@
+{
+  "DefId(2:32619 ~ core[b693]::marker::Sized)": {
+    "name": "std::marker::Sized",
+    "is_unsafe": false,
+    "external": {
+      "crate_name": "core",
+      "trait_path": "std::marker::Sized"
+    }
+  }
+}

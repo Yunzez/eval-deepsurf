@@ -13,31 +13,31 @@ use lz4_flex::block::compress::compress_prepend_size;
 use lz4_flex::block::decompress::decompress_size_prepended;
 use lz_fear::framed::LZ4FrameReader;
 use mp4ameta::Tag;
-use naga::front::wgsl::Parser;
+// use naga::front::wgsl::Parser; // disabled: naga pulls dependencies needing Rust >=1.82
 use npy::NpyData;
 use ntfs::Ntfs;
-use rust_minidump_85::Minidump as Minidump85;
-use rust_minidump_86::{
-    Minidump,
-    MinidumpAssertion,
-    MinidumpBreakpadInfo,
-    MinidumpCrashpadInfo,
-    MinidumpException,
-    MinidumpLinuxCpuInfo,
-    MinidumpLinuxEnviron,
-    MinidumpLinuxLsbRelease,
-    MinidumpLinuxMaps,
-    MinidumpLinuxProcStatus,
-    MinidumpMacCrashInfo,
-    MinidumpMemoryInfoList,
-    MinidumpMemoryList,
-    MinidumpMiscInfo,
-    MinidumpModuleList,
-    MinidumpSystemInfo,
-    MinidumpThreadList,
-    MinidumpThreadNames,
-    MinidumpUnloadedModuleList,
-};
+// use rust_minidump_85::Minidump as Minidump85;
+// use rust_minidump_86::{
+//     Minidump,
+//     MinidumpAssertion,
+//     MinidumpBreakpadInfo,
+//     MinidumpCrashpadInfo,
+//     MinidumpException,
+//     MinidumpLinuxCpuInfo,
+//     MinidumpLinuxEnviron,
+//     MinidumpLinuxLsbRelease,
+//     MinidumpLinuxMaps,
+//     MinidumpLinuxProcStatus,
+//     MinidumpMacCrashInfo,
+//     MinidumpMemoryInfoList,
+//     MinidumpMemoryList,
+//     MinidumpMiscInfo,
+//     MinidumpModuleList,
+//     MinidumpSystemInfo,
+//     MinidumpThreadList,
+//     MinidumpThreadNames,
+//     MinidumpUnloadedModuleList,
+// };
 use std::error::Error;
 use std::io::{self, Cursor, Read};
 
@@ -103,150 +103,155 @@ impl Default for BenchmarkData {
     }
 }
 
-pub unsafe fn main() {
+pub fn main() {
     println!("crate batch 3 benchmark starting");
     let data = BenchmarkData::default();
     benchmark(&data);
     println!("crate batch 3 benchmark ending");
 }
 
-pub unsafe fn benchmark(data: &BenchmarkData) {
+pub fn benchmark(data: &BenchmarkData) {
     benchmark_vec_u8(&data.testVecU8);
     benchmark_string_operations(&data.testString2, &data.testVecU8);
 }
 
-pub unsafe fn benchmark_vec_u8(bytes: &[u8]) {
-    // --- run 1 ---------------------------------------------------------------
-    {
-        let mut decoder = DeflateDecoder::new(Cursor::new(bytes));
-        let _ = io::copy(&mut decoder, &mut io::sink());
-    }
-
-    // --- run 2 ---------------------------------------------------------------
-    {
-        let _ = Document::load_mem(bytes);
-    }
-
-    // --- run 3 ---------------------------------------------------------------
-    {
-        let input = Cursor::new(bytes.to_vec());
-        let mut output = Vec::new();
-
-        if let Ok(reader) = LZ4FrameReader::new(input) {
-            let _ = reader.into_read().read_to_end(&mut output);
+pub fn benchmark_vec_u8(bytes: &[u8]) {
+    unsafe {
+        // --- run 1 ---------------------------------------------------------------
+        {
+            let mut decoder = DeflateDecoder::new(Cursor::new(bytes));
+            let _ = io::copy(&mut decoder, &mut io::sink());
         }
-    }
 
-    // --- run 4 ---------------------------------------------------------------
-    {
-        let compressed = compress_prepend_size(bytes);
-        let _ = decompress_size_prepended(&compressed);
-    }
-
-    // --- run 8 ---------------------------------------------------------------
-    {
-        // Original implementation returns immediately; nothing to execute here.
-    }
-
-    // --- run 9 ---------------------------------------------------------------
-    {
-        let mut cursor = Cursor::new(bytes.to_vec());
-        let _ = Tag::read_from(&mut cursor);
-    }
-
-    // --- run 10 --------------------------------------------------------------
-    {
-        let data_str = std::str::from_utf8(bytes).unwrap_or("");
-        let _ = Parser::new().parse(data_str);
-    }
-
-    // --- run 12 --------------------------------------------------------------
-    {
-        named!(parser01<&[u8], ()>,
-            do_parse!(
-                hdr: take!(1) >>
-                data: take!(1023) >>
-                ( () )
-            )
-        );
-
-        let mut buffer = bytes.to_vec();
-        if buffer.len() < 1024 {
-            buffer.resize(1024, 0);
+        // --- run 2 ---------------------------------------------------------------
+        {
+            let _ = Document::load_mem(bytes);
         }
-        let _ = parser01(&buffer);
-    }
 
-    // --- run 13 --------------------------------------------------------------
-    {
-        let _ = npy::from_bytes::<Array>(bytes);
-    }
+        // --- run 3 ---------------------------------------------------------------
+        {
+            let input = Cursor::new(bytes.to_vec());
+            let mut output = Vec::new();
 
-    // --- run 14 --------------------------------------------------------------
-    {
-        let mut cursor = Cursor::new(bytes.to_vec());
-        let _ = Ntfs::new(&mut cursor);
-
-        let mut mutated = bytes.to_vec();
-        mutated.extend_from_slice(bytes);
-        let mut cursor_mut = Cursor::new(mutated);
-        if let Ok(mut fs) = Ntfs::new(&mut cursor_mut) {
-            if let Err(e) = fs.read_upcase_table(&mut cursor_mut) {
-                eprintln!("Failed to read upcase table: {}", e);
+            if let Ok(reader) = LZ4FrameReader::new(input) {
+                let _ = reader.into_read().read_to_end(&mut output);
             }
-        } else {
-            eprintln!("Failed to create NTFS filesystem");
         }
-    }
 
-    // --- run 15 --------------------------------------------------------------
-    {
-        // Intentionally left blank as in source.
+        // --- run 4 ---------------------------------------------------------------
+        {
+            let compressed = compress_prepend_size(bytes);
+            let _ = decompress_size_prepended(&compressed);
+        }
+
+        // --- run 8 ---------------------------------------------------------------
+        {
+            // Original implementation returns immediately; nothing to execute here.
+        }
+
+        // --- run 9 ---------------------------------------------------------------
+        {
+            let mut cursor = Cursor::new(bytes.to_vec());
+            let _ = Tag::read_from(&mut cursor);
+        }
+
+    // --- run 10 disabled: naga requires a newer Rust compiler --------------
+    // {
+    //     let data_str = std::str::from_utf8(bytes).unwrap_or("");
+    //     let _ = Parser::new().parse(data_str);
+    // }
+
+        // --- run 12 --------------------------------------------------------------
+        {
+            named!(parser01<&[u8], ()>,
+                do_parse!(
+                    hdr: take!(1) >>
+                    data: take!(1023) >>
+                    ( () )
+                )
+            );
+
+            let mut buffer = bytes.to_vec();
+            if buffer.len() < 1024 {
+                buffer.resize(1024, 0);
+            }
+            let _ = parser01(&buffer);
+        }
+
+        // --- run 13 --------------------------------------------------------------
+        {
+            let _ = npy::from_bytes::<Array>(bytes);
+        }
+
+        // --- run 14 --------------------------------------------------------------
+        {
+            let mut cursor = Cursor::new(bytes.to_vec());
+            let _ = Ntfs::new(&mut cursor);
+
+            let mut mutated = bytes.to_vec();
+            mutated.extend_from_slice(bytes);
+            let mut cursor_mut = Cursor::new(mutated);
+            if let Ok(mut fs) = Ntfs::new(&mut cursor_mut) {
+                if let Err(e) = fs.read_upcase_table(&mut cursor_mut) {
+                    eprintln!("Failed to read upcase table: {}", e);
+                }
+            } else {
+                eprintln!("Failed to create NTFS filesystem");
+            }
+        }
+
+        // --- run 15 --------------------------------------------------------------
+        {
+            // Intentionally left blank as in source.
+        }
     }
 }
 
-pub unsafe fn benchmark_string_operations(str_data: &str, bytes: &[u8]) {
-    // --- run 5 ---------------------------------------------------------------
-    {
-        let panic_b64 = base64::encode(bytes);
-        let panic_data = base64::decode(panic_b64).unwrap_or_default();
-
-        let encoded_payload = base64::encode(str_data.as_bytes());
-        let decoded = base64::decode(&encoded_payload)
-            .unwrap_or_else(|_| str_data.as_bytes().to_vec());
-        Minidump85::read(decoded.clone());
-
-        if let Ok(dump) = Minidump::read(decoded.clone()) {
-            let _ = dump.get_stream::<MinidumpAssertion>();
-            let _ = dump.get_stream::<MinidumpBreakpadInfo>();
-            let _ = dump.get_stream::<MinidumpCrashpadInfo>();
-            let _ = dump.get_stream::<MinidumpException>();
-            let _ = dump.get_stream::<MinidumpLinuxCpuInfo>();
-            let _ = dump.get_stream::<MinidumpLinuxEnviron>();
-            let _ = dump.get_stream::<MinidumpLinuxLsbRelease>();
-            let _ = dump.get_stream::<MinidumpLinuxMaps>();
-            let _ = dump.get_stream::<MinidumpLinuxProcStatus>();
-            let _ = dump.get_stream::<MinidumpMacCrashInfo>();
-            let _ = dump.get_stream::<MinidumpMemoryInfoList>();
-            let _ = dump.get_stream::<MinidumpMemoryList>();
-            let _ = dump.get_stream::<MinidumpMiscInfo>();
-            let _ = dump.get_stream::<MinidumpModuleList>();
-            let _ = dump.get_stream::<MinidumpSystemInfo>();
-            let _ = dump.get_stream::<MinidumpThreadNames>();
-            let _ = dump.get_stream::<MinidumpThreadList>();
-            let _ = dump.get_stream::<MinidumpUnloadedModuleList>();
+pub fn benchmark_string_operations(str_data: &str, bytes: &[u8]) {
+    unsafe {
+        // --- run 5 ---------------------------------------------------------------
+        {
+        // Disabled: rust-minidump requires newer Rust toolchains.
+        // let panic_b64 = base64::encode(bytes);
+        // let panic_data = base64::decode(panic_b64).unwrap_or_default();
+        //
+        // let encoded_payload = base64::encode(str_data.as_bytes());
+        // let decoded = base64::decode(&encoded_payload)
+        //     .unwrap_or_else(|_| str_data.as_bytes().to_vec());
+        // Minidump85::read(decoded.clone());
+        //
+        // if let Ok(dump) = Minidump::read(decoded.clone()) {
+        //     let _ = dump.get_stream::<MinidumpAssertion>();
+        //     let _ = dump.get_stream::<MinidumpBreakpadInfo>();
+        //     let _ = dump.get_stream::<MinidumpCrashpadInfo>();
+        //     let _ = dump.get_stream::<MinidumpException>();
+        //     let _ = dump.get_stream::<MinidumpLinuxCpuInfo>();
+        //     let _ = dump.get_stream::<MinidumpLinuxEnviron>();
+        //     let _ = dump.get_stream::<MinidumpLinuxLsbRelease>();
+        //     let _ = dump.get_stream::<MinidumpLinuxMaps>();
+        //     let _ = dump.get_stream::<MinidumpLinuxProcStatus>();
+        //     let _ = dump.get_stream::<MinidumpMacCrashInfo>();
+        //     let _ = dump.get_stream::<MinidumpMemoryInfoList>();
+        //     let _ = dump.get_stream::<MinidumpMemoryList>();
+        //     let _ = dump.get_stream::<MinidumpMiscInfo>();
+        //     let _ = dump.get_stream::<MinidumpModuleList>();
+        //     let _ = dump.get_stream::<MinidumpSystemInfo>();
+        //     let _ = dump.get_stream::<MinidumpThreadNames>();
+        //     let _ = dump.get_stream::<MinidumpThreadList>();
+        //     let _ = dump.get_stream::<MinidumpUnloadedModuleList>();
+        // }
+        //
+        // match Minidump::read(&decoded[..]) {
+        //     Ok(f) => {
+        //         let e = f.get_stream::<MinidumpLinuxMaps>().unwrap_err();
+        //         assert_eq!(e.to_string(), "Data error");
+        //     }
+        //     Err(e) => {
+        //         println!("Expected to parse the header, got {:?}", e);
+        //     }
+        // }
+        //
+        // let _ = panic_data;
         }
-
-        match Minidump::read(&decoded[..]) {
-            Ok(f) => {
-                let e = f.get_stream::<MinidumpLinuxMaps>().unwrap_err();
-                assert_eq!(e.to_string(), "Data error");
-            }
-            Err(e) => {
-                println!("Expected to parse the header, got {:?}", e);
-            }
-        }
-
-        let _ = panic_data;
     }
 }

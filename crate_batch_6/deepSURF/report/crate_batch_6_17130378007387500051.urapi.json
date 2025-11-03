@@ -1,0 +1,232 @@
+{
+  "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)": {
+    "name": "crate_batch_6::benchmark_vec_u8",
+    "full_name": "crate_batch_6::benchmark_vec_u8",
+    "def_path_str": "benchmark_vec_u8::/workspace/crate_batch_6/src/lib.rs::281",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_6",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:37 ~ crate_batch_6[edbb]::main)": {
+    "name": "crate_batch_6::main",
+    "full_name": "crate_batch_6::main",
+    "def_path_str": "main::/workspace/crate_batch_6/src/lib.rs::97",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_6",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types)": {
+    "name": "crate_batch_6::get_arg_types",
+    "full_name": "crate_batch_6::get_arg_types",
+    "def_path_str": "get_arg_types::/workspace/crate_batch_6/src/lib.rs::148",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": {
+      "Option": {
+        "Array": [
+          {
+            "Enum": {
+              "def_id": "DefId(127:293 ~ wayland_commons[6fd0]::wire::ArgumentType)",
+              "name": "wayland_commons::wire::ArgumentType",
+              "full_name": "wayland_commons::wire::ArgumentType",
+              "is_consumable": false
+            }
+          },
+          "16"
+        ]
+      }
+    },
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_6",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings)": {
+    "name": "crate_batch_6::benchmark_template_and_strings",
+    "full_name": "crate_batch_6::benchmark_template_and_strings",
+    "def_path_str": "benchmark_template_and_strings::/workspace/crate_batch_6/src/lib.rs::180",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Primitive": "str"
+          },
+          false
+        ]
+      },
+      {
+        "Primitive": "u64"
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_6",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)": {
+    "name": "crate_batch_6::benchmark",
+    "full_name": "crate_batch_6::benchmark",
+    "def_path_str": "benchmark::/workspace/crate_batch_6/src/lib.rs::174",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Struct": {
+              "def_id": "DefId(0:27 ~ crate_batch_6[edbb]::BenchmarkData)",
+              "name": "crate_batch_6::BenchmarkData",
+              "full_name": "crate_batch_6::BenchmarkData",
+              "is_consumable": false
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_6",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc)": {
+    "name": "crate_batch_6::benchmark_misc",
+    "full_name": "crate_batch_6::benchmark_misc",
+    "def_path_str": "benchmark_misc::/workspace/crate_batch_6/src/lib.rs::389",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_6",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:46 ~ crate_batch_6[edbb]::convert_slice)": {
+    "name": "crate_batch_6::convert_slice",
+    "full_name": "crate_batch_6::convert_slice",
+    "def_path_str": "convert_slice::/workspace/crate_batch_6/src/lib.rs::133",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": {
+      "Option": {
+        "Reference": [
+          {
+            "Slice": {
+              "Generic": {
+                "name": "T",
+                "traits": {
+                  "DefId(2:32619 ~ core[b693]::marker::Sized)": {
+                    "Trait": {
+                      "def_id": "DefId(2:32619 ~ core[b693]::marker::Sized)",
+                      "types": [],
+                      "funcs": []
+                    }
+                  }
+                }
+              }
+            }
+          },
+          false
+        ]
+      }
+    },
+    "implicit_generics": [
+      {
+        "Generic": {
+          "name": "T",
+          "traits": {
+            "DefId(2:32619 ~ core[b693]::marker::Sized)": {
+              "Trait": {
+                "def_id": "DefId(2:32619 ~ core[b693]::marker::Sized)",
+                "types": [],
+                "funcs": []
+              }
+            }
+          }
+        }
+      }
+    ],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_6",
+    "reachable_unresolved_callees": {}
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "DefId(200:445 ~ prettytable[92b1]::format::Alignment)": {
+    "prettytable::format::Alignment::RIGHT": [],
+    "prettytable::format::Alignment::LEFT": [],
+    "prettytable::format::Alignment::CENTER": []
+  }
+}

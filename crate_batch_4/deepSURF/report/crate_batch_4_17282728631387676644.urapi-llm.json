@@ -1,0 +1,67 @@
+{
+  "DefId(0:24 ~ crate_batch_4[efd8]::benchmark_vec_u8)": {
+    "full_name": "crate_batch_4::benchmark_vec_u8",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      },
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:21 ~ crate_batch_4[efd8]::main)": {
+    "full_name": "crate_batch_4::main",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:26 ~ crate_batch_4[efd8]::decode_png)": {
+    "full_name": "crate_batch_4::decode_png",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": {
+      "Result": {
+        "ok": {
+          "Vector": {
+            "Primitive": "u8"
+          }
+        },
+        "err": "std::io::Error"
+      }
+    },
+    "implicit_generics": []
+  },
+  "DefId(0:22 ~ crate_batch_4[efd8]::benchmark)": {
+    "full_name": "crate_batch_4::benchmark",
+    "inputs": [
+      {
+        "Reference": {
+          "Struct": {
+            "def_id": "DefId(0:11 ~ crate_batch_4[efd8]::BenchmarkData)",
+            "full_name": "crate_batch_4::BenchmarkData"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  }
+}

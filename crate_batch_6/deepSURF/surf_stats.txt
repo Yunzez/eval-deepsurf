@@ -1,0 +1,46 @@
+
+Total Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPI Coverage: 5/7 (71.43%).
+* Targets Compiled: 5/6 (83.33%) in [280.838341122s].
+------------------------------------------------------------------------------------------------------------------------------------
+
+Target Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPIs w/ ≥ 1ft: 5/7 (71.43%).
+* Average Generation Time per Target: 264.000869163s/5 (52.800173832s).
+
+* URAPIs w/ ≥ 2ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 3ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 4ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/o any compilable targets: 2/7 (28.57%).
+------------------------------------------------------------------------------------------------------------------------------------
+
+Detailed Results: 
+------------------------------------------------------------------------------------------------------------------------------------
+  URAPI: DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_6_fuzz_17997780617928745793 [52.149952265s]
+  URAPI: DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_6_fuzz_18387544885740318548 [53.707950489s]
+  URAPI: DefId(0:37 ~ crate_batch_6[edbb]::main),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_6_fuzz_9306830355928128974 [51.588719917s]
+  URAPI: DefId(0:52 ~ crate_batch_6[edbb]::benchmark),
+    - 0 targets generated.
+  URAPI: DefId(0:46 ~ crate_batch_6[edbb]::convert_slice),
+    - Compilable Targets (0/1 ~ 0.00%):
+  URAPI: DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_6_fuzz_5130697570958458892 [52.233687133s]
+  URAPI: DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_6_fuzz_3751115272684356604 [54.320559359s]
+------------------------------------------------------------------------------------------------------------------------------------

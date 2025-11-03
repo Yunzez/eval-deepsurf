@@ -1,0 +1,123 @@
+{
+  "DefId(0:43 ~ crate_batch_4[1e19]::benchmark_vec_u8)": {
+    "full_name": "crate_batch_4::benchmark_vec_u8",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      },
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:37 ~ crate_batch_4[1e19]::main)": {
+    "full_name": "crate_batch_4::main",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:39 ~ crate_batch_4[1e19]::run_table)": {
+    "full_name": "crate_batch_4::run_table",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Struct": {
+              "def_id": "DefId(0:32 ~ crate_batch_4[1e19]::TableRowData)",
+              "full_name": "crate_batch_4::TableRowData"
+            }
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:44 ~ crate_batch_4[1e19]::benchmark_strings)": {
+    "full_name": "crate_batch_4::benchmark_strings",
+    "inputs": [
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:41 ~ crate_batch_4[1e19]::benchmark)": {
+    "full_name": "crate_batch_4::benchmark",
+    "inputs": [
+      {
+        "Reference": {
+          "Struct": {
+            "def_id": "DefId(0:22 ~ crate_batch_4[1e19]::BenchmarkData)",
+            "full_name": "crate_batch_4::BenchmarkData"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:38 ~ crate_batch_4[1e19]::align_from_u8)": {
+    "full_name": "crate_batch_4::align_from_u8",
+    "inputs": [
+      {
+        "Primitive": "u8"
+      }
+    ],
+    "output": {
+      "Enum": {
+        "def_id": "DefId(99:445 ~ prettytable[7503]::format::Alignment)",
+        "full_name": "prettytable::format::Alignment"
+      }
+    },
+    "implicit_generics": []
+  },
+  "DefId(0:46 ~ crate_batch_4[1e19]::decode_png)": {
+    "full_name": "crate_batch_4::decode_png",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": {
+      "Result": {
+        "ok": {
+          "Vector": {
+            "Primitive": "u8"
+          }
+        },
+        "err": "std::io::Error"
+      }
+    },
+    "implicit_generics": []
+  }
+}

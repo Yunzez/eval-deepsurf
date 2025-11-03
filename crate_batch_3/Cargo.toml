@@ -13,16 +13,11 @@ lopdf={git = "https://github.com/J-F-Liu/lopdf", rev = "53090ad"}
 lz-fear={git="https://github.com/main--/rust-lz-fear", rev="8cb5d60"}
 lz4_flex={git="https://github.com/PSeitz/lz4_flex", rev = "8daa6ec"}
 
-# rust-minidump-84={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="5758292"}
-rust-minidump-85={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="f0bdcc9"}
-
-# # ? for line 86 - 90
-rust-minidump-86={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="22d7608"}
-# minidump-processor={git="",rev = "5f31ab7"}
-minidump-processor-86={package = "minidump-processor", git="https://github.com/rust-minidump/rust-minidump", rev="22d7608"}
-
-
-rust-minidump-93={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="83f68a6"}
+# rust-minidump crates depend on newer Rust toolchains; disable for rustc_surf.
+# rust-minidump-85={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="f0bdcc9"}
+# rust-minidump-86={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="22d7608"}
+# minidump-processor-86={package = "minidump-processor", git="https://github.com/rust-minidump/rust-minidump", rev="22d7608"}
+# rust-minidump-93={package = "minidump", git="https://github.com/rust-minidump/rust-minidump", rev="83f68a6"}
 
 
 
@@ -30,7 +25,8 @@ miniz_oxide={git="https://github.com/Frommi/miniz_oxide", rev = "0adc62b"}
 
 mp4ameta = "0.11.0"
 
-naga={git="https://github.com/gfx-rs/naga", rev = "1f5008f"}
+# naga requires newer compiler features; disabled.
+# naga={git="https://github.com/gfx-rs/naga", rev = "1f5008f"}
 
 ncurses-rs="0.0.3"
 

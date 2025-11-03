@@ -1,15 +1,14 @@
 use glob::glob;
 use pcapng::block::parse_block;
-use pdf_112::file::File as Pdf112File;
-use pdf_115::file::File as Pdf115File;
-use phonenumber;
-use pgp;
-use plist;
-use prettytable::{Cell, Row, Table};
-use pulldown_cmark_128;
-use pulldown_cmark_131;
-use pulldown_cmark_133;
-use quick_xml::reader::Reader;
+// use pdf_112::file::File as Pdf112File;
+// use pdf_115::file::File as Pdf115File;
+// use phonenumber; // disabled: dependency stack requires newer Rust
+// use plist;
+// use prettytable::{Cell, Row, Table};
+// use pulldown_cmark_128;
+// use pulldown_cmark_131;
+// use pulldown_cmark_133;
+// use quick_xml::reader::Reader; // disabled with quick-xml dependency
 use std::ffi::CString;
 use std::io::{self, Cursor};
 use std::str;
@@ -67,14 +66,14 @@ pub struct BenchmarkData {
     pub testKey: [u8; 64],
 }
 
-pub struct TableCellData {
-    pub text: String,
-    pub alignment: u8,
-}
+// struct TableCellData {
+//     pub text: String,
+//     pub alignment: u8,
+// }
 
-pub struct TableRowData {
-    pub cells: Vec<TableCellData>,
-}
+// struct TableRowData {
+//     pub cells: Vec<TableCellData>,
+// }
 
 impl Default for BenchmarkData {
     fn default() -> Self {
@@ -88,201 +87,148 @@ impl Default for BenchmarkData {
     }
 }
 
-pub unsafe fn main() {
+pub fn main() {
     println!("crate batch 4 benchmark starting");
     let data = BenchmarkData::default();
     benchmark(&data);
     println!("crate batch 4 benchmark ending");
 }
 
-pub unsafe fn align_from_u8(x: u8) -> prettytable::format::Alignment {
-    match x {
-        0 => prettytable::format::Alignment::LEFT,
-        1 => prettytable::format::Alignment::CENTER,
-        _ => prettytable::format::Alignment::RIGHT,
-    }
-}
+// fn align_from_u8(x: u8) -> prettytable::format::Alignment {
+//     unsafe {
+//         match x {
+//             0 => prettytable::format::Alignment::LEFT,
+//             1 => prettytable::format::Alignment::CENTER,
+//             _ => prettytable::format::Alignment::RIGHT,
+//         }
+//     }
+// }
 
-pub unsafe fn run_table(data: &[TableRowData]) {
-    let mut pt = Table::new();
-    for row in data {
-        let cells = row
-            .cells
-            .iter()
-            .map(|cell| Cell::new_align(&cell.text, align_from_u8(cell.alignment)))
-            .collect();
-        pt.add_row(Row::new(cells));
-    }
+// fn run_table(data: &[TableRowData]) {
+//     unsafe {
+//         let mut pt = Table::new();
+//         for row in data {
+//             let cells = row
+//                 .cells
+//                 .iter()
+//                 .map(|cell| Cell::new_align(&cell.text, align_from_u8(cell.alignment)))
+//                 .collect();
+//             pt.add_row(Row::new(cells));
+//         }
 
-    let _ = pt.print(&mut io::sink());
-}
+//         let _ = pt.print(&mut io::sink());
+//     }
+// }
 
-pub unsafe fn benchmark(data: &BenchmarkData) {
+pub fn benchmark(data: &BenchmarkData) {
     benchmark_misc();
     benchmark_vec_u8(&data.testVecU8, &data.testKey);
-    benchmark_strings(&data.testString, &data.testString2, &data.testVecU8);
+    // benchmark_strings(&data.testString, &data.testString2, &data.testVecU8);
 }
 
-unsafe fn benchmark_misc() {
-    // --- run 1 ---------------------------------------------------------------
-    {
-        // Original code is commented out.
-        let _ = CString::new("noop").unwrap();
-    }
-}
-
-pub unsafe fn benchmark_vec_u8(bytes: &[u8], key: &[u8]) {
-    // --- run 2 ---------------------------------------------------------------
-    {
-        let _ = parse_block(bytes);
-    }
-
-    // --- run 4 ---------------------------------------------------------------
-    {
-        println!("running pdf_112");
-        Pdf112File::from_data(bytes);
-    }
-
-    // --- run 5 ---------------------------------------------------------------
-    {
-        println!("running pdf_115");
-        let mut lexer = pdf_115::parser::Lexer::new(bytes);
-        let resolve = pdf_115::object::NoResolve;
-
-        match pdf_115::parser::parse_xref_stream_and_trailer(&mut lexer, &resolve) {
-            Ok((xref_sections, dictionary)) => {
-                println!("Parsed xref sections: {:?}", xref_sections);
-                println!("Parsed dictionary: {:?}", dictionary);
-            }
-            Err(e) => println!("Failed to parse xref stream and trailer: {:?}", e),
+fn benchmark_misc() {
+    unsafe {
+        // --- run 1 ---------------------------------------------------------------
+        {
+            // Original code is commented out.
+            let _ = CString::new("noop").unwrap();
         }
-
-        for entry in glob("invalid/*.pdf").expect("Failed to read glob pattern") {
-            match entry {
-                Ok(path) => {
-                    let path_str = match path.to_str() {
-                        Some(p) => p,
-                        None => continue,
-                    };
-                    println!("\n\n == Now testing `{}` ==\n", path_str);
-
-                    match Pdf115File::<Vec<u8>>::open(path_str) {
-                        Ok(file) => {
-                            for i in 0..file.num_pages() {
-                                let _ = file.get_page(i);
-                            }
-                        }
-                        Err(_) => continue,
-                    }
-                }
-                Err(e) => panic!("error when reading glob patterns: {:?}", e),
-            }
-        }
-    }
-
-    // --- run 6 ---------------------------------------------------------------
-    {
-        println!("running pgp");
-        let mut signature = [0u8; 8];
-        let copy_len = key.len().min(signature.len());
-        if copy_len > 0 {
-            signature[..copy_len].copy_from_slice(&key[..copy_len]);
-        }
-        let _ = pgp::Signature::from_slice(pgp::types::Version::New, &signature);
-    }
-
-    // --- run 7 ---------------------------------------------------------------
-    {
-        println!("running plist");
-        let cursor = Cursor::new(bytes.to_vec());
-        let _ = plist::Value::from_reader(cursor);
-    }
-
-    // --- run 8 ---------------------------------------------------------------
-    {
-        let _ = decode_png(bytes);
     }
 }
 
-pub unsafe fn benchmark_strings(str: &str, str2: &str, bytes: &[u8]) {
-    // --- run 3 ---------------------------------------------------------------
-    {
-        let digits: String = str.chars().filter(|c| c.is_ascii_digit()).collect();
-        let input = if digits.is_empty() {
-            String::from("1234567890")
-        } else {
-            digits
-        };
-        let _ = phonenumber::parse(None, input);
-    }
-
-    // --- run 9 ---------------------------------------------------------------
-    {
-        let table_data = [
-            TableRowData {
-                cells: vec![TableCellData {
-                    text: str.to_owned(),
-                    alignment: 0u8,
-                }],
-            },
-            TableRowData {
-                cells: vec![TableCellData {
-                    text: str2.to_owned(),
-                    alignment: 1u8,
-                }],
-            },
-        ];
-        run_table(&table_data);
-    }
-
-    // --- run 10 --------------------------------------------------------------
-    {
-        let text = str.to_owned();
-        let _ = pulldown_cmark_128::Parser::new(&text);
-
-        let mut output = String::new();
-        let parser = pulldown_cmark_131::Parser::new(&text);
-        pulldown_cmark_131::html::push_html(&mut output, parser);
-
-        let mut opts = pulldown_cmark_133::Options::empty();
-        opts.insert(pulldown_cmark_133::Options::ENABLE_HEADING_ATTRIBUTES);
-
-        for _ in pulldown_cmark_133::Parser::new_ext(&text, opts) {}
-
-        let _ = str2.to_owned();
-    }
-
-    // --- run 11 --------------------------------------------------------------
-    {
-        let cursor = Cursor::new(bytes.to_vec());
-        let mut reader = Reader::from_reader(cursor);
-        reader.trim_text(true);
-        let mut buf = Vec::new();
-        loop {
-            match reader.read_event(&mut buf) {
-                Ok(quick_xml::events::Event::Eof) | Err(_) => break,
-                _ => buf.clear(),
-            }
+pub fn benchmark_vec_u8(bytes: &[u8], key: &[u8]) {
+    unsafe {
+        // --- run 2 ---------------------------------------------------------------
+        {
+            let _ = parse_block(bytes);
         }
 
-        let mut reader = Reader::from_str(str);
-        let mut buf = Vec::new();
-        let _ = reader.read_event(&mut buf);
-        let _ = reader.read_event(&mut buf);
+    // --- run 4 disabled: pdf crate stack requires Rust >=1.82 ---------------
+    // {
+    //     println!("running pdf_112");
+    //     Pdf112File::from_data(bytes);
+    // }
+
+    // --- run 5 disabled: pdf crate stack requires Rust >=1.82 ---------------
+    // {
+    //     println!("running pdf_115");
+    //     let mut lexer = pdf_115::parser::Lexer::new(bytes);
+    //     let resolve = pdf_115::object::NoResolve;
+    //
+    //     match pdf_115::parser::parse_xref_stream_and_trailer(&mut lexer, &resolve) {
+    //         Ok((xref_sections, dictionary)) => {
+    //             println!("Parsed xref sections: {:?}", xref_sections);
+    //             println!("Parsed dictionary: {:?}", dictionary);
+    //         }
+    //         Err(e) => println!("Failed to parse xref stream and trailer: {:?}", e),
+    //     }
+    //
+    //     for entry in glob("invalid/*.pdf").expect("Failed to read glob pattern") {
+    //         match entry {
+    //             Ok(path) => {
+    //                 let path_str = match path.to_str() {
+    //                     Some(p) => p,
+    //                     None => continue,
+    //                 };
+    //                 println!("\n\n == Now testing `{}` ==\n", path_str);
+    //
+    //                 match Pdf115File::<Vec<u8>>::open(path_str) {
+    //                     Ok(file) => {
+    //                         for i in 0..file.num_pages() {
+    //                             let _ = file.get_page(i);
+    //                         }
+    //                     }
+    //                     Err(_) => continue,
+    //                 }
+    //             }
+    //             Err(e) => panic!("error when reading glob patterns: {:?}", e),
+    //         }
+    //     }
+    // }
+
+    // --- run 6 disabled: pgp pulls in edition2024 dependencies -------------
+    // {
+    //     println!("running pgp");
+    //     let mut signature = [0u8; 8];
+    //     let copy_len = key.len().min(signature.len());
+    //     if copy_len > 0 {
+    //         signature[..copy_len].copy_from_slice(&key[..copy_len]);
+    //     }
+    //     let _ = pgp::Signature::from_slice(pgp::types::Version::New, &signature);
+    // }
+
+    // --- run 7 disabled: plist depends on time-core requiring unstable features
+    // {
+    //     println!("running plist");
+    //     let cursor = Cursor::new(bytes.to_vec());
+    //     let _ = plist::Value::from_reader(cursor);
+    // }
+
+        // --- run 8 ---------------------------------------------------------------
+        {
+            let _ = decode_png(bytes);
+        }
     }
 }
 
-pub unsafe fn decode_png(data: &[u8]) -> io::Result<Vec<u8>> {
-    let limits = png::Limits { bytes: 1 << 16 };
-    let decoder = png::Decoder::new_with_limits(data, limits);
-    let (info, mut reader) = decoder.read_info()?;
+pub fn benchmark_strings(_str: &str, _str2: &str, _bytes: &[u8]) {
+    // Disabled content due to incompatible dependencies.
+    println!("benchmark_strings disabled");
+}
 
-    if info.buffer_size() > 5_000_000 {
-        return Err(io::Error::new(io::ErrorKind::Other, "memory limit exceeded"));
+pub fn decode_png(data: &[u8]) -> io::Result<Vec<u8>> {
+    unsafe {
+        let limits = png::Limits { bytes: 1 << 16 };
+        let decoder = png::Decoder::new_with_limits(data, limits);
+        let (info, mut reader) = decoder.read_info()?;
+
+        if info.buffer_size() > 5_000_000 {
+            return Err(io::Error::new(io::ErrorKind::Other, "memory limit exceeded"));
+        }
+
+        let mut buffer = vec![0u8; info.buffer_size()];
+        reader.next_frame(&mut buffer)?;
+
+        Ok(buffer)
     }
-
-    let mut buffer = vec![0u8; info.buffer_size()];
-    reader.next_frame(&mut buffer)?;
-
-    Ok(buffer)
 }

@@ -4,7 +4,7 @@ version = "0.1.0"
 edition = "2021"
 
 [patch.crates-io]
-
+backtrace = { git = "https://github.com/rust-lang/backtrace-rs", rev = "38d49aa0395c50047ab26e418a0cb30d9955fb64" }
 [lib]
 path = "src/lib.rs"
 
@@ -20,7 +20,8 @@ rustc-demangle = { git = "https://github.com/rust-lang/rustc-demangle", rev = "4
 
 semver = "0.9.0"
 
-sequoia-openpgp = { git = "https://gitlab.com/sequoia-pgp/sequoia", rev = "adcbb3fd" }
+# sequoia-openpgp depends on nettle; disable for rustc_surf environment.
+# sequoia-openpgp = { git = "https://gitlab.com/sequoia-pgp/sequoia", rev = "adcbb3fd" }
 serde = "1.0"
 serde_yaml = "0.8.3"
 
@@ -36,7 +37,8 @@ soroban-env-host = { git = "https://github.com/stellar/rs-soroban-env", rev = "2
 
 soroban-env-common = { git = "https://github.com/stellar/rs-soroban-env", rev = "2ceaad2" }
 
-sqlparser = { git = "https://github.com/apache/datafusion-sqlparser-rs", rev = "35ef0ee" }
+# sqlparser relies on ICU crates requiring Rust ≥1.82; disabled for rustc_surf toolchain.
+# sqlparser = { git = "https://github.com/apache/datafusion-sqlparser-rs", rev = "35ef0ee" }
 
 ssh-keys = { git = "https://github.com/tailhook/ssh-keys", rev = "36fe530" }
 
@@ -44,16 +46,18 @@ ssh-parser = { git = "https://github.com/rusticata/ssh-parser", rev = "5f197b9" 
 
 swf-parser = { git = "https://github.com/open-flash/swf-parser", rev = "3993499" }
 
-symbolic = { package = "symbolic", git = "https://github.com/getsentry/symbolic", rev = "af3e580", features = [
-    "demangle",
-    "unreal",
-] }
+# symbolic pulls in the latest `backtrace`, which needs Rust ≥1.82; disable for compatibility.
+# symbolic = { package = "symbolic", git = "https://github.com/getsentry/symbolic", rev = "af3e580", features = [
+#     "demangle",
+#     "unreal",
+# ] }
 
-minidump = "0.22.0"
-minidump-processor = "0.22.0"
-minidump-unwind = "0.22.0"
+# minidump crates rely on newer toolchains; disable.
+# minidump = "0.22.0"
+# minidump-processor = "0.22.0"
+# minidump-unwind = "0.22.0"
 
-symbolic-minidump = "=8.5.0"
+# symbolic-minidump = "=8.5.0"
 
 # symbolic-unreal = { package = "symbolic", git = "https://github.com/getsentry/symbolic", rev = "af3e580", features = [
 #     "unreal",
@@ -75,7 +79,8 @@ syn_188 = { package = "syn", git = "https://github.com/dtolnay/syn", rev = "132b
 
 tera_190 = {package = "tera", git= "https://github.com/Keats/tera", rev = "5495105"}
 
-sqlformat = {git = "https://github.com/shssoichiro/sqlformat-rs", rev = "62c7110"}
+# sqlformat depends on `idna_adapter` (ICU) requiring Rust ≥1.82; disable to keep MSRV in range.
+# sqlformat = {git = "https://github.com/shssoichiro/sqlformat-rs", rev = "62c7110"}
 
 
 raven-uxn = { git = "https://github.com/mkeeter/raven", rev = "4a6c08f" }

@@ -1,0 +1,60 @@
+{
+  "DefId(0:40 ~ crate_batch_2[29f2]::benchmark_vec_u8)": {
+    "full_name": "crate_batch_2::benchmark_vec_u8",
+    "inputs": [
+      {
+        "Reference": {
+          "Slice": {
+            "Primitive": "u8"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:37 ~ crate_batch_2[29f2]::benchmark)": {
+    "full_name": "crate_batch_2::benchmark",
+    "inputs": [
+      {
+        "Reference": {
+          "Struct": {
+            "def_id": "DefId(0:26 ~ crate_batch_2[29f2]::BenchmarkData)",
+            "full_name": "crate_batch_2::BenchmarkData"
+          }
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:42 ~ crate_batch_2[29f2]::benchmark_strings)": {
+    "full_name": "crate_batch_2::benchmark_strings",
+    "inputs": [
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      },
+      {
+        "Reference": {
+          "Primitive": "str"
+        }
+      }
+    ],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:36 ~ crate_batch_2[29f2]::main)": {
+    "full_name": "crate_batch_2::main",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  },
+  "DefId(0:38 ~ crate_batch_2[29f2]::benchmark_artifacts)": {
+    "full_name": "crate_batch_2::benchmark_artifacts",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": []
+  }
+}

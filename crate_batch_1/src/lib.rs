@@ -1,4 +1,4 @@
-use alloy_json_abi::JsonAbi;
+// use alloy_json_abi::JsonAbi; // disabled: alloy-json-abi pulls ruint requiring edition2024
 use std::io::{BufReader, Cursor};
 use der::Decodable;
 // pub struct BenchmarkData {
@@ -88,30 +88,31 @@ impl Default for BenchmarkData{
 //     }
 // }
 
-pub unsafe fn main() {
+pub fn main() {
     println!("crate batch 1 benchmark starting");
     let input = vec![1, 2, 3, 4, 5];
     let data = BenchmarkData::default();
+    
     benchmark(&data);
 }
 
-pub unsafe fn benchmark(data: &BenchmarkData) {
-    benchmark_string(&data.testString, &data.testString2);
-    benchmark_vec_u8(&data.testVecU8, data.testU64, &data.testKey);
+pub fn benchmark(data: &BenchmarkData) {
+        benchmark_string(&data.testString, &data.testString2);
+        benchmark_vec_u8(&data.testVecU8, data.testU64, &data.testKey);
 }
 
 
-pub unsafe fn benchmark_string(str: &str, str2: &str) {
+pub fn benchmark_string(str: &str, str2: &str) {
+    unsafe{
     println!("Benchmarking with input string: {}", str);
 
-     // --- run 1 ---------------------------------------------------------------
+    // --- run 1 (disabled to avoid alloy-json-abi -> ruint edition2024) -------
     {
-        let abi_lines = str.lines();
-
-        match JsonAbi::parse(abi_lines) {
-            Ok(parsed_abi) => println!("Parsed ABI: {:?}", parsed_abi),
-            Err(err) => eprintln!("Error parsing ABI: {}", err),
-        }
+        // let abi_lines = str.lines();
+        // match JsonAbi::parse(abi_lines) {
+        //     Ok(parsed_abi) => println!("Parsed ABI: {:?}", parsed_abi),
+        //     Err(err) => eprintln!("Error parsing ABI: {}", err),
+        // }
     }
 
 
@@ -156,14 +157,14 @@ pub unsafe fn benchmark_string(str: &str, str2: &str) {
     {
         let _ = exmex::parse_with_default_ops::<f64>(str).unwrap();
     }
-
+    }
 
 }
 
 
-pub unsafe fn benchmark_vec_u8(data: &Vec<u8>, num: u64, key: &[u8; 64]) {
+pub fn benchmark_vec_u8(data: &Vec<u8>, num: u64, key: &[u8; 64]) {
     println!("Benchmarking with input vec u8: {:?}", data);
-
+    unsafe {
     // --- run 4 ---------------------------------------------------------------
     {
         let input = data.as_slice();
@@ -185,16 +186,16 @@ pub unsafe fn benchmark_vec_u8(data: &Vec<u8>, num: u64, key: &[u8; 64]) {
         }
     }
 
-     // --- run 5 ---------------------------------------------------------------
-    {
-        let mut cursor1 = Cursor::new(data.as_slice());
-        let mut cursor2 = Cursor::new(data.as_slice());
-        let _ = bson_10::decode_document(&mut cursor1);
-        let _ = bson_11::decode_document(&mut cursor2);
-
-        let mut reader = Cursor::new(data.clone());
-        let _ = bson_12::Document::from_reader(&mut reader);
-    }
+    // --- run 5 (disabled: bson -> serde_json -> indexmap 2.12 MSRV >=1.82) ---
+    // {
+    //     let mut cursor1 = Cursor::new(data.as_slice());
+    //     let mut cursor2 = Cursor::new(data.as_slice());
+    //     let _ = bson_10::decode_document(&mut cursor1);
+    //     let _ = bson_11::decode_document(&mut cursor2);
+    //
+    //     let mut reader = Cursor::new(data.clone());
+    //     let _ = bson_12::Document::from_reader(&mut reader);
+    // }
 
     // --- run 6_part2 ---------------------------------------------------------------
     {
@@ -229,23 +230,23 @@ pub unsafe fn benchmark_vec_u8(data: &Vec<u8>, num: u64, key: &[u8; 64]) {
         }
     }
 
-    // --- run 11 --------------------------------------------------------------
-    {
-        let str_result = std::str::from_utf8(data.as_slice());
-        if let Ok(s) = str_result {
-            let mut siv = cursive::default();
-
-            siv.add_layer(
-                cursive::views::Dialog::around(cursive::views::TextView::new(s))
-                    .title("Cursive")
-                    .button("Quit", |s| s.quit()),
-            );
-
-            siv.run();
-        } else {
-            println!("not valid utf8");
-        }
-    }
+    // --- run 11 (disabled: cursive -> serde_json MSRV >=1.82) ---------------
+    // {
+    //     let str_result = std::str::from_utf8(data.as_slice());
+    //     if let Ok(s) = str_result {
+    //         let mut siv = cursive::default();
+    //
+    //         siv.add_layer(
+    //             cursive::views::Dialog::around(cursive::views::TextView::new(s))
+    //                 .title("Cursive")
+    //                 .button("Quit", |s| s.quit()),
+    //         );
+    //
+    //         siv.run();
+    //     } else {
+    //         println!("not valid utf8");
+    //     }
+    // }
 
     // --- run 12 --------------------------------------------------------------
     {
@@ -279,15 +280,17 @@ pub unsafe fn benchmark_vec_u8(data: &Vec<u8>, num: u64, key: &[u8; 64]) {
         }
     }
 
-    // --- run 17 --------------------------------------------------------------
-    {
-        let mut buf_reader = BufReader::new(Cursor::new(data.clone()));
-
-        match flatgeobuf::FgbReader::open(&mut buf_reader) {
-            Ok(mut reader) => {
-                let _ = reader.header();
-            }
-            Err(err) => eprintln!("Failed to open FgbReader: {}", err),
-        }
-    }
+    // --- run 17 (disabled: flatgeobuf -> reqwest -> url 2.5.x -> ICU) -------
+    // {
+    //     let mut buf_reader = BufReader::new(Cursor::new(data.clone()));
+    //
+    //     match flatgeobuf::FgbReader::open(&mut buf_reader) {
+    //         Ok(mut reader) => {
+    //             let _ = reader.header();
+    //         }
+    //         Err(err) => eprintln!("Failed to open FgbReader: {}", err),
+    //     }
+    // }
 }
+}
+

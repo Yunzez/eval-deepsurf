@@ -1,0 +1,126 @@
+{
+  "DefId(0:64 ~ crate_batch_5[7830]::benchmark_string_ops)": {
+    "name": "benchmark_string_ops",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:64 ~ crate_batch_5[7830]::benchmark_string_ops)",
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)",
+      "DefId(0:53 ~ crate_batch_5[7830]::main)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:58 ~ crate_batch_5[7830]::benchmark_vec_u8)": {
+    "name": "benchmark_vec_u8",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)",
+      "DefId(0:53 ~ crate_batch_5[7830]::main)",
+      "DefId(0:58 ~ crate_batch_5[7830]::benchmark_vec_u8)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:62 ~ crate_batch_5[7830]::benchmark_numeric)": {
+    "name": "benchmark_numeric",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)",
+      "DefId(0:53 ~ crate_batch_5[7830]::main)",
+      "DefId(0:62 ~ crate_batch_5[7830]::benchmark_numeric)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:56 ~ crate_batch_5[7830]::benchmark)": {
+    "name": "benchmark",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:53 ~ crate_batch_5[7830]::main)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:53 ~ crate_batch_5[7830]::main)": {
+    "name": "main",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:69 ~ crate_batch_5[7830]::benchmark_misc)": {
+    "name": "benchmark_misc",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)",
+      "DefId(0:69 ~ crate_batch_5[7830]::benchmark_misc)",
+      "DefId(0:53 ~ crate_batch_5[7830]::main)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:54 ~ crate_batch_5[7830]::test_decode)": {
+    "name": "test_decode",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:58 ~ crate_batch_5[7830]::benchmark_vec_u8)"
+    ],
+    "public_predecessors": [
+      "DefId(0:56 ~ crate_batch_5[7830]::benchmark)",
+      "DefId(0:53 ~ crate_batch_5[7830]::main)",
+      "DefId(0:58 ~ crate_batch_5[7830]::benchmark_vec_u8)",
+      "DefId(0:54 ~ crate_batch_5[7830]::test_decode)"
+    ],
+    "unresolved_callees": [
+      "DefId(148:421 ~ symphonia_core[870e]::codecs::Decoder::decode)",
+      "DefId(148:678 ~ symphonia_core[870e]::formats::FormatReader::default_track)",
+      "DefId(148:679 ~ symphonia_core[870e]::formats::FormatReader::next_packet)"
+    ]
+  },
+  "DefId(0:51 ~ crate_batch_5[7830]::{impl#0}::default)": {
+    "name": "<BenchmarkData as std::default::Default>::default",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_5",
+    "visibility": "PubFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<BenchmarkData as std::default::Default>",
+        "impl_tr_name": "DefId(2:3041 ~ core[b693]::default::Default)"
+      }
+    },
+    "callers": [
+      "DefId(0:53 ~ crate_batch_5[7830]::main)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  }
+}

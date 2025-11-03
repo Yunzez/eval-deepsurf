@@ -1,0 +1,121 @@
+{
+  "DefId(0:21 ~ crate_batch_4[b00f]::benchmark)": {
+    "name": "crate_batch_4::benchmark",
+    "full_name": "crate_batch_4::benchmark",
+    "def_path_str": "benchmark::/workspace/crate_batch_4/src/lib.rs::123",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Struct": {
+              "def_id": "DefId(0:10 ~ crate_batch_4[b00f]::BenchmarkData)",
+              "name": "crate_batch_4::BenchmarkData",
+              "full_name": "crate_batch_4::BenchmarkData",
+              "is_consumable": false
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:23 ~ crate_batch_4[b00f]::benchmark_vec_u8)": {
+    "name": "crate_batch_4::benchmark_vec_u8",
+    "full_name": "crate_batch_4::benchmark_vec_u8",
+    "def_path_str": "benchmark_vec_u8::/workspace/crate_batch_4/src/lib.rs::139",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      },
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:20 ~ crate_batch_4[b00f]::main)": {
+    "name": "crate_batch_4::main",
+    "full_name": "crate_batch_4::main",
+    "def_path_str": "main::/workspace/crate_batch_4/src/lib.rs::90",
+    "inputs": [],
+    "output": null,
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  },
+  "DefId(0:25 ~ crate_batch_4[b00f]::decode_png)": {
+    "name": "crate_batch_4::decode_png",
+    "full_name": "crate_batch_4::decode_png",
+    "def_path_str": "decode_png::/workspace/crate_batch_4/src/lib.rs::219",
+    "inputs": [
+      {
+        "Reference": [
+          {
+            "Slice": {
+              "Primitive": "u8"
+            }
+          },
+          false
+        ]
+      }
+    ],
+    "output": {
+      "Result": {
+        "ok": {
+          "Vector": {
+            "Primitive": "u8"
+          }
+        },
+        "err": "std::io::Error"
+      }
+    },
+    "implicit_generics": [],
+    "flags": {
+      "is_debug": false,
+      "is_drop": false,
+      "has_self": false,
+      "is_display": false
+    },
+    "crate_name": "crate_batch_4",
+    "reachable_unresolved_callees": {}
+  }
+}

@@ -1,0 +1,258 @@
+{
+  "DefId(0:64 ~ crate_batch_6[edbb]::{impl#1}::curve_to::panic_cold_explicit)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::curve_to::panic_cold_explicit",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:44 ~ crate_batch_6[edbb]::{impl#1}::curve_to)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:61 ~ crate_batch_6[edbb]::{impl#1}::move_to::panic_cold_explicit)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::move_to::panic_cold_explicit",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:41 ~ crate_batch_6[edbb]::{impl#1}::move_to)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)": {
+    "name": "benchmark",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:37 ~ crate_batch_6[edbb]::main)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:46 ~ crate_batch_6[edbb]::convert_slice)": {
+    "name": "convert_slice",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)"
+    ],
+    "public_predecessors": [
+      "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)",
+      "DefId(0:37 ~ crate_batch_6[edbb]::main)",
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)",
+      "DefId(0:46 ~ crate_batch_6[edbb]::convert_slice)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:43 ~ crate_batch_6[edbb]::{impl#1}::quad_to)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::quad_to",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Builder as ttf_parser::OutlineBuilder>",
+        "impl_tr_name": "DefId(75:2096 ~ ttf_parser[4ba1]::OutlineBuilder)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:37 ~ crate_batch_6[edbb]::main)": {
+    "name": "main",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:63 ~ crate_batch_6[edbb]::{impl#1}::quad_to::panic_cold_explicit)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::quad_to::panic_cold_explicit",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:43 ~ crate_batch_6[edbb]::{impl#1}::quad_to)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc)": {
+    "name": "benchmark_misc",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc)",
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)",
+      "DefId(0:37 ~ crate_batch_6[edbb]::main)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types)": {
+    "name": "get_arg_types",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)"
+    ],
+    "public_predecessors": [
+      "DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types)",
+      "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)",
+      "DefId(0:37 ~ crate_batch_6[edbb]::main)",
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:45 ~ crate_batch_6[edbb]::{impl#1}::close)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::close",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Builder as ttf_parser::OutlineBuilder>",
+        "impl_tr_name": "DefId(75:2096 ~ ttf_parser[4ba1]::OutlineBuilder)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:42 ~ crate_batch_6[edbb]::{impl#1}::line_to)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::line_to",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Builder as ttf_parser::OutlineBuilder>",
+        "impl_tr_name": "DefId(75:2096 ~ ttf_parser[4ba1]::OutlineBuilder)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:65 ~ crate_batch_6[edbb]::{impl#1}::close::panic_cold_explicit)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::close::panic_cold_explicit",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:45 ~ crate_batch_6[edbb]::{impl#1}::close)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:62 ~ crate_batch_6[edbb]::{impl#1}::line_to::panic_cold_explicit)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::line_to::panic_cold_explicit",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:42 ~ crate_batch_6[edbb]::{impl#1}::line_to)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)": {
+    "name": "benchmark_vec_u8",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:56 ~ crate_batch_6[edbb]::benchmark_vec_u8)",
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)",
+      "DefId(0:37 ~ crate_batch_6[edbb]::main)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings)": {
+    "name": "benchmark_template_and_strings",
+    "safety": "UnsafeBlockFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": "Fn",
+    "callers": [
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)"
+    ],
+    "public_predecessors": [
+      "DefId(0:52 ~ crate_batch_6[edbb]::benchmark)",
+      "DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings)",
+      "DefId(0:37 ~ crate_batch_6[edbb]::main)"
+    ],
+    "unresolved_callees": []
+  },
+  "DefId(0:44 ~ crate_batch_6[edbb]::{impl#1}::curve_to)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::curve_to",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Builder as ttf_parser::OutlineBuilder>",
+        "impl_tr_name": "DefId(75:2096 ~ ttf_parser[4ba1]::OutlineBuilder)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:41 ~ crate_batch_6[edbb]::{impl#1}::move_to)": {
+    "name": "<Builder as ttf_parser::OutlineBuilder>::move_to",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PrvFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<Builder as ttf_parser::OutlineBuilder>",
+        "impl_tr_name": "DefId(75:2096 ~ ttf_parser[4ba1]::OutlineBuilder)"
+      }
+    },
+    "callers": [],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  },
+  "DefId(0:35 ~ crate_batch_6[edbb]::{impl#0}::default)": {
+    "name": "<BenchmarkData as std::default::Default>::default",
+    "safety": "SafeFn",
+    "crate_name": "crate_batch_6",
+    "visibility": "PubFn",
+    "fn_type": {
+      "Method": {
+        "impl_name": "<BenchmarkData as std::default::Default>",
+        "impl_tr_name": "DefId(2:3041 ~ core[b693]::default::Default)"
+      }
+    },
+    "callers": [
+      "DefId(0:37 ~ crate_batch_6[edbb]::main)"
+    ],
+    "public_predecessors": [],
+    "unresolved_callees": []
+  }
+}

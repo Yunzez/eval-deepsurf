@@ -1,0 +1,24 @@
+{
+  "DefId(0:36 ~ crate_batch_4[7896]::align_from_u8)": {
+    "name": "crate_batch_4::align_from_u8",
+    "full_name": "crate_batch_4::align_from_u8",
+    "def_path_str": "align_from_u8::/workspace/crate_batch_4/src/lib.rs::97",
+    "inputs": [
+      {
+        "Primitive": "u8"
+      }
+    ],
+    "output": {
+      "Enum": {
+        "def_id": "DefId(58:445 ~ prettytable[7503]::format::Alignment)",
+        "name": "prettytable::format::Alignment",
+        "full_name": "prettytable::format::Alignment",
+        "is_consumable": false
+      }
+    },
+    "implicit_generics": [],
+    "flags": {
+      "has_self": false
+    }
+  }
+}

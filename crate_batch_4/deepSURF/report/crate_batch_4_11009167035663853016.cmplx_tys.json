@@ -1,0 +1,7 @@
+{
+  "DefId(0:33 ~ crate_batch_4[98c8]::TableRowData)": [],
+  "DefId(200:445 ~ prettytable[92b1]::format::Alignment)": [
+    "DefId(0:39 ~ crate_batch_4[98c8]::align_from_u8)"
+  ],
+  "DefId(0:23 ~ crate_batch_4[98c8]::BenchmarkData)": []
+}

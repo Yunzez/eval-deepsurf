@@ -1,0 +1,47 @@
+
+Total Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPI Coverage: 6/7 (85.71%).
+* Targets Compiled: 6/6 (100.00%) in [416.738872014s].
+------------------------------------------------------------------------------------------------------------------------------------
+
+Target Stats:
+------------------------------------------------------------------------------------------------------------------------------------
+* URAPIs w/ ≥ 1ft: 6/7 (85.71%).
+* Average Generation Time per Target: 567.82654606s/6 (94.637757676s).
+
+* URAPIs w/ ≥ 2ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 3ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/ ≥ 4ft: 0/7 (0.00%).
+* Average Generation Time per Target: 0ns/0 (Na).
+
+* URAPIs w/o any compilable targets: 1/7 (14.29%).
+------------------------------------------------------------------------------------------------------------------------------------
+
+Detailed Results: 
+------------------------------------------------------------------------------------------------------------------------------------
+  URAPI: DefId(0:59 ~ crate_batch_5[16e3]::benchmark_vec_u8),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_5_fuzz_7000530662392981961 [94.263775457s]
+  URAPI: DefId(0:55 ~ crate_batch_5[16e3]::test_decode),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_5_fuzz_37105114486108006 [96.025669807s]
+  URAPI: DefId(0:57 ~ crate_batch_5[16e3]::benchmark),
+    - 0 targets generated.
+  URAPI: DefId(0:72 ~ crate_batch_5[16e3]::benchmark_misc),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_5_fuzz_2739137318924074812 [94.18326139s]
+  URAPI: DefId(0:54 ~ crate_batch_5[16e3]::main),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_5_fuzz_17713093821510439994 [94.189746565s]
+  URAPI: DefId(0:63 ~ crate_batch_5[16e3]::benchmark_numeric),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_5_fuzz_13065362831321379305 [94.115501668s]
+  URAPI: DefId(0:65 ~ crate_batch_5[16e3]::benchmark_string_ops),
+    - Compilable Targets (1/1 ~ 100.00%):
+        * crate_batch_5_fuzz_12558067947162243517 [95.048591173s]
+------------------------------------------------------------------------------------------------------------------------------------
