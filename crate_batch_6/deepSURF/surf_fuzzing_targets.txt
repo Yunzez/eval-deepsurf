@@ -6,28 +6,28 @@ SURF: Generated Targets to be Fuzzed
     - LLM-improved: false,
     - Fuzzing Targets:
       * crate_batch_6_fuzz_5130697570958458892
-  StableURAPI: benchmark_misc::/workspace/crate_batch_6/src/lib.rs::389,
-    - URAPI: DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc),
-    - Macro-expanded: false,
-    - LLM-improved: false,
-    - Fuzzing Targets:
-      * crate_batch_6_fuzz_17997780617928745793
-  StableURAPI: get_arg_types::/workspace/crate_batch_6/src/lib.rs::148,
-    - URAPI: DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types),
-    - Macro-expanded: false,
-    - LLM-improved: false,
-    - Fuzzing Targets:
-      * crate_batch_6_fuzz_18387544885740318548
-  StableURAPI: benchmark_template_and_strings::/workspace/crate_batch_6/src/lib.rs::180,
-    - URAPI: DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings),
-    - Macro-expanded: false,
-    - LLM-improved: false,
-    - Fuzzing Targets:
-      * crate_batch_6_fuzz_3751115272684356604
   StableURAPI: main::/workspace/crate_batch_6/src/lib.rs::97,
     - URAPI: DefId(0:37 ~ crate_batch_6[edbb]::main),
     - Macro-expanded: false,
     - LLM-improved: false,
     - Fuzzing Targets:
       * crate_batch_6_fuzz_9306830355928128974
+  StableURAPI: get_arg_types::/workspace/crate_batch_6/src/lib.rs::148,
+    - URAPI: DefId(0:48 ~ crate_batch_6[edbb]::get_arg_types),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_18387544885740318548
+  StableURAPI: benchmark_misc::/workspace/crate_batch_6/src/lib.rs::389,
+    - URAPI: DefId(0:60 ~ crate_batch_6[edbb]::benchmark_misc),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_17997780617928745793
+  StableURAPI: benchmark_template_and_strings::/workspace/crate_batch_6/src/lib.rs::180,
+    - URAPI: DefId(0:53 ~ crate_batch_6[edbb]::benchmark_template_and_strings),
+    - Macro-expanded: false,
+    - LLM-improved: false,
+    - Fuzzing Targets:
+      * crate_batch_6_fuzz_3751115272684356604
 ------------------------------------------------------------------------------------------------------------------------------------

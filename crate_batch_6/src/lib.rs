@@ -317,7 +317,6 @@ pub fn benchmark_vec_u8(bytes: &[u8]) {
 
         // --- run 13 --------------------------------------------------------------
         {
-            println!("run 13");
             let mut message_data = bytes.to_vec();
             if message_data.len() < 48 {
                 message_data.resize(48, 0);
@@ -328,11 +327,7 @@ pub fn benchmark_vec_u8(bytes: &[u8]) {
             let rest = convert_slice::<u32>(&slice[32..]);
 
             if let (Some(fds), Some(args), Some(payload)) = (fds, args, rest) {
-                let result = panic::catch_unwind(|| Message::from_raw(payload, &args, fds));
-                match result {
-                    Ok(_) => println!("✅ Message parsing succeeded."),
-                    Err(_) => eprintln!("❌ Caught panic in `Message::from_raw`"),
-                }
+                let result = Message::from_raw(payload, &args, fds);
             } else {
                 eprintln!("❌ Invalid input detected, skipping Message::from_raw");
             }
@@ -353,7 +348,6 @@ pub fn benchmark_vec_u8(bytes: &[u8]) {
 
         // --- run 16 --------------------------------------------------------------
         {
-            println!("running run 16");
             let mut zip_bytes = bytes.to_vec();
             if zip_bytes.len() < 4 {
                 zip_bytes.extend_from_slice(&[0u8; 4]);
